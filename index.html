@@ -4,38 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" type="text/css" href="../assets/css/AA.css"> -->
-
-    <title>有料｜首頁</title>
+    <title>有料|首頁</title>
     <style>
-    *{
-        margin: 0px;
-        padding: 0px;
-    }
-        .menu {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            color: white;
-            background-color: #22333B;
-          }
-        .navbar {
-            background-color: #22333B;
-        }
-          
+        @import url("assets/css/all.css");
     </style>
 </head>
-
 <body>
-    <header>
-		<h1 class="spotlight" data-spotlight="Resume">Resume</h1>
-	<nav class="navbar">
-	    <ul>
-		    <li><a href="#product">商品頁面</a></li>
-		    <li><a href="#member">會員中心</a></li>
-		    <li><a href="#about_us">關於我們</a></li>
-	    </ul>
-    </nav>
-</header>
+    <div class="top">
+        <!--網頁最上方固定欄 -->
+        <header>
+            <div class="t-logo">
+                <a href="index.html" >
+                    <img src="assets/images/icon/logo.png" width="100px" alt="有料">
+                </a>
+            </div>
+            <!--頁面選單 -->
+            <nav>
+                <div class="t-showProducts">
+                    <a href="#">商品頁面</a>
+                </div>
+                <div class="t-MemberCenter">
+                    <a href="#">會員中心</a>
+                </div>
+                <div class="t-aboutUS">
+                    <a href="#">關於有料</a>
+                </div>
+            </nav>
+            <!--會員及購物車圖標-->
+        </header>
+    </div>
 </body>
 </html>
