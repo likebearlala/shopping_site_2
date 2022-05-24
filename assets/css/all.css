@@ -1,79 +1,47 @@
-* {
+*{
     font-family: "新細明體";
-}
-body {
     margin: 0%;
     padding: 0%;
+}
+body{
+
     background-color: #EAE0D5;
+    list-style: none;
 }
 
-.top {
+.top{
     margin: 0%;
 }
 
-header {
+header{
     margin: 0%;
     background-color: #22333B;
     display: flex;
 }
 
-.t-logo {
-    margin: 15px 50px 0;
+.t-logo{
+    margin: 15px 60px 0;
 }
 
-nav {
+nav{
     display: flex;
-    padding: 25px 160px 0px 80px;
+    padding: 25px 100px 0px 100px;
     font-size: 23px;
 }
-nav a {
+nav a{
     color: antiquewhite;
     text-decoration: none;
     padding: 25px 35px 20px;
     margin: 0;
 }
-.t-showProducts {
+.t-showProducts{
     padding: 25px 0 0 ;
     margin: 0 40px 0 0;
 }
-.t-MemberCenter {
+.t-MemberCenter{
     padding: 25px 0 0 ;
     margin: 0 40px 0 0;
 }
-.t-aboutUS {
+.t-aboutUS{
     padding: 25px 0 0 ;
-}
-
-.t-icon {
-    display: flex;
-    padding: 40px 25px 0px;
-}
-.t-i-user {
-    margin: 0 30px 0 20px;
-}
-.t-i-cart {
-    margin: 0 20px 0 20px;
-}
-
-.t-search{
-    padding: 45px 10px 0;
-}
-.searchForm {
-    display: flex;
-}
-.searchText {
-    background-color: #EAE0D5;
-    font-size: medium;
-    width: 150px;
-    height: 30px;
-    border: none;
-    outline: none;
-    padding: 0 15px;
-    border-radius: 25px 0 0 25px;
-}
-.searchIcon{
-    padding: 5px 15px 0px;
-    border: none;
-    border-radius: 0 25px 25px 0;
-    background-color: #EAE0D5;
 }
