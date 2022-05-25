@@ -1,6 +1,7 @@
 .row{
     /* width: 100%; */
-    margin: 3%;
+    margin: 3%; 
+    /* margin這裡要改 */
     display: flex;
 }
 .row-left{
