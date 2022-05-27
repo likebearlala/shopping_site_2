@@ -25,5 +25,21 @@ section {
     width: 77%;
 }
 .section_Tital {
-    margin: 20px;
+    margin: 0 4.5%;
+}
+.row {
+    display: flex;
+    margin: 0 0 2%;
+}
+.row img {
+    margin: 0 0 0 13%;
+    width: 74%;
+}
+.products p {
+    text-align: center;
+    font-size: 20px;
+}
+.products a {
+    text-decoration: none;
+    color: #22333B;
 }

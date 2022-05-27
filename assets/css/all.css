@@ -74,3 +74,12 @@ nav a {
     border-radius: 0 25px 25px 0;
     background-color: #EAE0D5;
 }
+
+footer {
+    width: 100%;
+    float: left;
+    padding: 3% 0;
+    color: #EAE0D5;
+    text-align: center;
+    background: #22333B;
+}
