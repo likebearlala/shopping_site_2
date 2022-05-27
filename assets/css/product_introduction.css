@@ -1,7 +1,7 @@
 .row{
     /* width: 100%; */
-    margin: 3%; 
-    /* margin這裡要改 */
+    /* margin: 3%; */
+    padding: 150px;
     display: flex;
 }
 .row-left{
