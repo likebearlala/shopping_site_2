@@ -20,12 +20,17 @@ aside div a {
 
 section {
     margin: 140px 60px;
-    border: #B3ABA3 solid;
+    border: #c9c2bbde solid;
+    border-radius: 1%;
     float: right;
     width: 77%;
 }
 .section_Tital {
-    margin: 0 4.5%;
+    display: flex;
+    margin: 2% 4.5%;
+}
+.section_Tital h3 {
+    margin: 24px 0 0 5px;
 }
 .row {
     display: flex;
