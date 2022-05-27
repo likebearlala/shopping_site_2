@@ -1,7 +1,9 @@
 .row{
     /* width: 100%; */
     /* margin: 3%; */
-    padding: 150px;
+    padding-top: 150px;
+    padding-right: 150px ;
+    padding-bottom: 150px;
     display: flex;
 }
 .row-left{
@@ -18,4 +20,9 @@
     text-align: left;
     /* margin-left: 5%; */
     margin-right: 6%;
+}
+.board-left {
+    margin: auto;
+    padding-top: 20%;
+    text-align: left;
 }
