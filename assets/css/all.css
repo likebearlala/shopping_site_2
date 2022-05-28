@@ -12,6 +12,7 @@ header {
     background-color: #22333B;
     display: flex;
     position: fixed;
+    z-index: 50;
 }
 
 .t-logo {
@@ -73,6 +74,10 @@ nav a {
     border: none;
     border-radius: 0 25px 25px 0;
     background-color: #EAE0D5;
+}
+
+.slide {
+    padding: 47px 0px 40px;
 }
 
 footer {
