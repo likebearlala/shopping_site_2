@@ -90,24 +90,49 @@
                 </form>
             </div>
         </div>
-    喵
-    </div>
-    
-    <!-- <div class="board">
-        <table> 
-            <form method="post">
-                <div class="board-left">
-                    <textarea rows="4" cols="50" placeholder="留下您對於商品的評論...."></textarea>
-                </div>
-                <div class="board-right">
-                    <tr>
-                        <td></td>
-                    </tr> 
-                </div>
-            </form>
-        </table> 
-    </div> -->
+
+        <!-- 評論區 -->
+
+    <form method="post" class="board" action="">
+                <!-- 會動的星星 -->
+        <div class="comment-row">
+                        <div class="comment-left">
+                            <div class="comment-username">
+                                 仟儀美女
+                                 <div class="star">
+                                    <!-- <form action="" method="post"> -->
+                                        <div class="rating">                      
+                                            <input type="radio" id="radio-btn-1" name="star" value="5">
+                                            <label for="radio-btn-1">&#9733;</label>                     
+                                            <input type="radio" id="radio-btn-2" name="star" value="4">
+                                            <label class="" for="radio-btn-2">&#9733;</label>                    
+                                            <input type="radio" id="radio-btn-3" name="star" value="3">
+                                            <label for="radio-btn-3">&#9733;</label>
+                                            <input type="radio" id="radio-btn-4" name="star" value="2">
+                                            <label for="radio-btn-4">&#9733;</label>
+                                            <input type="radio" id="radio-btn-5" name="star" value="1">
+                                            <label for="radio-btn-5">&#9733;</label>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="comment-userphoto">
+                                <img  class="member_register-userphoto" src="assets/images/others/user.png" width="150px" height="150px" style="padding: 2px;">
+                            </div>
+                        </div>
+
+                        <div class="comment-right">
+                            <textarea rows="5" cols="70" placeholder="留下您對於商品的評論...." >
+                            </textarea>
+                            <input type="submit" value="提交評論" name="submit" class="star_value" id="comment-right-button"/>
+                        </div>
+
+                        
+                <!-- </form> -->
+            </div>
+    </form>
+</div>
 
 </section>
+
 </body>
 </html>
