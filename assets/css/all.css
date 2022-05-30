@@ -62,7 +62,7 @@ nav a {
 .searchText {
     background-color: #EAE0D5;
     font-size: medium;
-    width: 150px;
+    width: 180px;
     height: 30px;
     border: none;
     outline: none;
@@ -70,14 +70,14 @@ nav a {
     border-radius: 25px 0 0 25px;
 }
 .searchIcon{
-    padding: 5px 15px 0px;
+    padding: 0px 15px ;
     border: none;
     border-radius: 0 25px 25px 0;
     background-color: #EAE0D5;
 }
 
 .slide {
-    padding: 47px 0px 40px;
+    padding: 50px 0px 40px;
 }
 
 footer {
