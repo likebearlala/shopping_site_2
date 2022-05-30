@@ -15,11 +15,14 @@ section{
     width: 30%;
     border-radius: 25px;
     opacity: 1;
-    /* opacity: 1; */
     background-color: rgba(255, 250, 250, 0.8);
     font-size: 1em;
     border-spacing: 10px;
     box-shadow: 10px 8px 6px #444;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .member_register-th{
     text-align: center;
@@ -30,6 +33,7 @@ section{
     height: 150px;
     width: 150px;
     margin: auto;
+    text-align: center;
 }
 .register_button{
     text-align: center;
