@@ -1,30 +1,21 @@
 .Row{
-    width: 130%;
-    /* margin: 3%; */
+    width: 100%;
     padding: 0 22% 0;
     padding-top: 150px;
-    /* padding-right: 150px ;
-    padding-bottom: 150px; */
     display: flex;
     justify-content: space-around;
     box-sizing: content-box;
 }
 .Row-left{
-    /* float: left; */
     margin: 0% auto;
     padding: 0% 4%;
-    /* margin-left: 10%; */
-    /* margin-right: 5%; */
     float: left;
 } 
 .Row-right{
-    /* float: right; */
     margin: 0% auto;
     padding: 0% 4%;
     text-align: left;
-    /* margin-left: 5%; */
     float: right;
-    /* margin-right: 6%; */
     line-height: 2;
 }
 .Row-right h2 {
@@ -36,7 +27,7 @@
   font-size: 25px;
   margin: 10px 0 10px 5px;
   font-weight: bold;
-  line-height: 2;
+  line-height: 1;
  }
 .comment-row{
   background-color: black;
@@ -50,35 +41,22 @@
   text-align: left;
   padding: 5%;
 }
-.test{
-  text-align:right;
-  position: relative;
-  display: flex;
-  justify-content: right;
-  align-items: right;
+
+.board-example{
+  width:250px;
+  margin:0px auto;
+  padding:0px;
 }
-/* .comment-left {
-    margin: auto;
-    text-align: left;
-    margin-right: 30%;
-}
-.comment-right{
-    text-align: left;
-    padding-top: 80%;
-}
-.comment-username{
-  position: relative;
-  margin-bottom: 0%;
-}
-.comment-right{
-  margin-left: 40%;
-  margin-right: 0%;
-}
-#comment-right-button{
-  margin:5%;
-} */
+
 .comment-username{
   text-align: center;
+}
+
+.comment-userphoto{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .table-center{
@@ -88,18 +66,34 @@
   align-items: left;
 }
 
-.timestamp{
-  font-size: 12px;
+.comment-timestamp{
+  font-size: 18px;
   color:gray;
+  text-align: center;
+}
+
+hr {
+  text-align: center;
+}
+
+.comment-submit{
+  position: relative;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  padding-bottom: 10%;
+  /* background-color: #444; */
+}
+
+#comment-right-button{
+  margin-bottom: 20%;
 }
 
 /* 會動的星星 */
 
 .board {
     width:250px;
-    margin:100px auto;
-    padding:100px;
-    /* border:1px solid #d9d9d9; */
+    margin:0px auto;
   }
   
   .star_value {

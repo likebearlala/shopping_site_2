@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>有料|會員註冊</title>
-    <link rel="stylesheet"  href="assets/css/all.css">
-    <link rel="stylesheet"  href="assets/css/register.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/register.css">
     <script>
-
-        function check(){  //檢查密碼與確認密碼的值有沒有一致
-		  	var password1=document.getElementById("password").value;
-			var password2=document.getElementById("check_password").value;
-			if(password1!=password2){
-					alert("密碼不一致請核查");
-			}
-		  }
-       </script>
+        function check() { //檢查密碼與確認密碼的值有沒有一致
+            var password1 = document.getElementById("password").value;
+            var password2 = document.getElementById("check_password").value;
+            if (password1 != password2) {
+                alert("密碼不一致請核查");
+            }
+        }
+    </script>
 </head>
+
 <body>
     <header>
         <!--網頁最上方固定欄-->
@@ -66,47 +67,57 @@
     </header>
     <!--網頁最上方固定欄結束-->
 
-<section>
-<div class="register_flex">
-    <div class="member_register">  
-        <table class="member_register-div">
-            <form method="post" action=""  onclick="">
-                <tr>
-                    <th colspan="2"><h2 class="member_register-th"> 會員註冊</h2></th>
-                </tr>
-                <tr>
-                    <th colspan="3">
-                        <div >
-                            <img  class="member_register-userphoto" src="assets/images/others/user.png">
-                        </div>
-                    </th>
-                </tr>
-                <tr>
-                    <td>姓名:</td>
-                    <td class="member_register-td"><input type="text" name="username" size="15" placeholder="Username" /></td>
-                </tr>
-                <tr>
-                    <td>電子郵件:</td>
-                    <td class="member_register-td"><input type="email" name="email" size="30" placeholder="Email" /></td>
-                </tr>
-                <tr>
-                    <td>密碼:</td>
-                    <td class="member_register-td"><input type="password" name="password" id="password" required="required" placeholder="Password"/></td>
-                </tr>
-                <tr>
-                    <td>確認密碼:</td> 
-                    <td class="member_register-td"><input type="password" name="check_password" id="check_password"  onblur="check()" required="required" placeholder="Comfirm password" /></td>
-                </tr>
+    <section>
+        <div class="register_flex">
+            <div class="member_register">
+                <table class="member_register-div">
+                    <form method="post" action="" onclick="">
+                        <tr>
+                            <th colspan="2">
+                                <h2 class="member_register-th"> 會員註冊</h2>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="3">
+                                <div>
+                                    <img class="member_register-userphoto" src="assets/images/others/user.png">
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>姓名:</td>
+                            <td class="member_register-td"><input type="text" name="username" size="15"
+                                    placeholder="Username" /></td>
+                        </tr>
+                        <tr>
+                            <td>電子郵件:</td>
+                            <td class="member_register-td"><input type="email" name="email" size="30"
+                                    placeholder="Email" /></td>
+                        </tr>
+                        <tr>
+                            <td>密碼:</td>
+                            <td class="member_register-td"><input type="password" name="password" id="password"
+                                    required="required" placeholder="Password" /></td>
+                        </tr>
+                        <tr>
+                            <td>確認密碼:</td>
+                            <td class="member_register-td"><input type="password" name="check_password"
+                                    id="check_password" onblur="check()" required="required"
+                                    placeholder="Comfirm password" /></td>
+                        </tr>
 
-                <tr><td colspan="2" class="register_button">
-                    <!-- button看要不要修 -->
-                        <input name="sign_button" class="button" type="submit" value="註冊" onclick="" />
-                        <input class="button" type="reset" value="重填" />
-                </td></tr>
-            </form>
-        </table>
-    </div>
-</div>
-</section>
+                        <tr>
+                            <td colspan="2" class="register_button">
+                                <!-- button看要不要修 -->
+                                <input name="sign_button" class="button" type="submit" value="註冊" onclick="" />
+                                <input class="button" type="reset" value="重填" />
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>

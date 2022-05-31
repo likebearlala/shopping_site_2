@@ -7,15 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/all.css">
     <link rel="stylesheet" href="assets/css/signIn.css">
-    <title>登入</title>
-    <script>
-        if (user_email = null) {
-            alert("請輸入帳號!!不可為空值!!");
-        } 
-        if (user_password = null) {
-            alert("請輸入密碼!!不可為空值!!");
-        }
-    </script>
+    <link rel="stylesheet" href="assets/js/sign_In.js">
+    <title>有料|登入</title>
 </head>
 
 <body>
@@ -67,22 +60,22 @@
     <!--網頁最上方固定欄結束-->
 
     <section>
-            <div class="sign_in">
-                <form method="post" action="">
-                    <img src="assets/images/others/others_noodles-1.png" width="10%" height="10%">
-                    <h2>會員登入</h2>
-                    <p>帳號: <input type="email" name="user_email" placeholder="請輸入電子郵件" /> </p>
-                    <p>密碼: <input type="password" name="user_password" placeholder="請輸入密碼" /></p>
-                    <div class="">
-                        <input class="button" type="submit" value="登入" />
-                        <input class="button" type="reset" value="重填" />
-                    </div>
-                    <div class="register">
-                        還沒註冊?<a href="register.html">前往註冊</a>
-                    </div>
+        <div class="sign_in">
+            <form method="post" action="">
+                <img src="assets/images/others/others_noodles-1.png" width="10%" height="10%">
+                <h2>會員登入</h2>
+                <p>帳號: <input type="email" name="user_email" placeholder="請輸入電子郵件" /> </p>
+                <p>密碼: <input type="password" name="user_password" placeholder="請輸入密碼" /></p>
+                <div class="button">
+                    <input class="button" type="submit" value="登入" onclick="IfNull()" />
+                    <input class="button" type="reset" value="重填" />
+                </div>
+                <div class="register">
+                    還沒註冊?<a href="register.html">前往註冊</a>
+                </div>
 
-                </form>
-            </div>
+            </form>
+        </div>
     </section>
 </body>
 
