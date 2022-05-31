@@ -57,7 +57,7 @@ section {
 .reset_data {
     margin: 20px 0px 40px 100px;
     display: flex;
-    width: 42%;
+    width: 44%;
     padding: 0 6% ;
     border: none;
     border-radius: 25px;
@@ -65,6 +65,7 @@ section {
     box-shadow: 5px 6px 0 #22333B;
 }
 .reset_data img {
+    border-radius: 0%;
     margin: 5% 10% 5% 0;
     background-color: #f8f1e9;
 }
