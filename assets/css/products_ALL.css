@@ -19,7 +19,7 @@ aside div a {
 }
 
 section {
-    margin: 140px 60px;
+    margin: 120px 60px;
     border: #c9c2bbde solid;
     border-radius: 1%;
     float: right;
@@ -29,16 +29,24 @@ section {
     display: flex;
     margin: 2% 4.5%;
 }
-.section_Tital h3 {
-    margin: 24px 0 0 5px;
+.section_Tital h2 {
+    font-weight: bold;
 }
-.row {
+.section_Tital h3 {
+    margin: 5px 0 0 8px;
+    font-weight: bold;
+}
+.Row {
     display: flex;
     margin: 0 0 2%;
 }
-.row img {
-    margin: 0 0 0 13%;
-    width: 74%;
+.Row img {
+    margin: 0;
+    width: 100%;
+}
+.products {
+    padding: 1%;
+    margin: 2%;
 }
 .products p {
     text-align: center;
