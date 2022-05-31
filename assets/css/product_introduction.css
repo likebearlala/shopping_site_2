@@ -38,18 +38,28 @@
   font-weight: bold;
   line-height: 2;
  }
-/* .row-left-photo {
-    margin-bottom: 10%;
-} */
 .comment-row{
-  display: flex;
-  padding-top: 50%;
+  background-color: black;
 }
-.comment-left {
+.member_register-userphoto{
+  padding: 2px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.comment-right{
+  text-align: left;
+  padding: 5%;
+}
+.test{
+  text-align:right;
+  position: relative;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+/* .comment-left {
     margin: auto;
-    /* padding-top: 20%; */
     text-align: left;
-    /* background-color: white; */
     margin-right: 30%;
 }
 .comment-right{
@@ -61,12 +71,26 @@
   margin-bottom: 0%;
 }
 .comment-right{
-  /* position: relative; */
   margin-left: 40%;
   margin-right: 0%;
 }
 #comment-right-button{
   margin:5%;
+} */
+.comment-username{
+  text-align: center;
+}
+
+.table-center{
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+.timestamp{
+  font-size: 12px;
+  color:gray;
 }
 
 /* 會動的星星 */
@@ -80,9 +104,6 @@
   
   .star_value {
     text-align:center;
-    /* font-size:20px; */
-    /* border:1px solid #d9d9d9; */
-    /* background-color:#efefef; */
   }
   
   /* hiding the radio buttons */
@@ -104,10 +125,16 @@
     direction:rtl;
     unicode-bidi: bidi-override;
   }
+
+  .star{
+    text-align: center;
+  }
   
 body{
     background-color: #EAE0D5;
     display: inline-block;
 }
   /* 不會動的星星 */
- 
+  .checked {
+    color: orange;
+  }
