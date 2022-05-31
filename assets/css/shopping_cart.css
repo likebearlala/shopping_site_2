@@ -1,10 +1,13 @@
-.shop_cart{
-    margin: auto;
+.shop_cart th,td{
     border: 1px solid black;
-    margin-top: 10%;
+}
+.shop_cart{
     position: relative;
     justify-content: center;
     align-items: center;
+    margin: auto;
+    margin-top: 10%;
+    width: 60%;
 }
 
 body{
