@@ -1,3 +1,4 @@
+/* 商品區排版 */
 .Row{
     width: 100%;
     padding: 0 22% 0;
@@ -29,6 +30,14 @@
   font-weight: bold;
   line-height: 1;
  }
+
+ /* 存貨 */
+ .inventory{
+    font-size:16px;
+    margin-left: 2%;
+ }
+
+ /* 評論區排版 */
 .comment-row{
   background-color: black;
 }
@@ -47,11 +56,11 @@
   margin:0px auto;
   padding:0px;
 }
-
+/* 使用者名稱 */
 .comment-left-username{
   text-align: center;
 }
-
+/* 大頭貼 */
 .comment-userphoto{
   position: relative;
   display: flex;
@@ -65,7 +74,7 @@
   justify-content: left;
   align-items: left;
 }
-
+/* 時間 */
 .comment-timestamp{
   font-size: 18px;
   color:gray;
@@ -73,6 +82,11 @@
 }
 
 hr {
+  text-align: center;
+}
+
+.comment-row-hr{
+  border-top: 1px solid gray;
   text-align: center;
 }
 
@@ -85,8 +99,9 @@ hr {
   /* background-color: #444; */
 }
 
+/* 提交評論button */
 #comment-right-button{
-  margin-bottom: 20%;
+  margin-bottom: 10%;
 }
 
 /* 會動的星星 */
@@ -132,3 +147,11 @@ body{
   .checked {
     color: orange;
   }
+
+
+  /* rwd */
+  /* @media screen (min-width:820px) {
+    
+  } */
+
+

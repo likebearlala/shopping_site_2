@@ -63,45 +63,43 @@
 
 
     <!-- 商品介紹頁面 -->
+    
     <div class="Cols">
         <div class="Row">
             <div class="Row-left">
-                <div class="row-left-photo">
-                    <img src="assets/images/products/zeng_guocheng00.jpg" width="450px" height="450px">
+                <div class="row-left-photo"> <!--商品圖片-->
+                    <img src="assets/images/products/zeng_guocheng00.jpg" width="500px" height="500px">
                 </div>
             </div>
 
             <div class="Row-right">
                 <form method="post">
                     <div>
-                        <h2>曾粉 海味叻沙 Seafood Laksa</h2>
+                        <h2>曾粉 海味叻沙 Seafood Laksa</h2> <!--商品名字-->
                     </div>
                     <div>
-                        <h3>NT$198</h3>
+                        <h3>NT$198</h3> <!--商品價格-->
                     </div>
                     <div>
-                        <ul>
+                        <ul> <!--商品介紹-->
                             <li>成分含蝦。</li>
                             <li>辛辣程度：微辣。</li>
                             <li>使用宜蘭老字號虎牌米粉，乾湯兩吃，美味升級。</li>
                             <li>濃郁咖哩與香甜椰漿熬製，充滿異國風味，濃而不膩。</li>
                         </ul>
-                    </div><br>
-                    <div>
-                        <p>數量：
-                            <!-- <input type="text" name="amount" size="1" placeholder="1"> -->
-                            <select size="1" name="amount">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                            <input type="submit" value="加到購物車"></p>
                     </div>
-                </form>
-            </div>
-        </div>
+                    <p>
+                        <div class="button">數量： <!--購買數量-->
+                            <input type="button" class="button-num" value="-" id="btnMinus" onclick="minusNUM()">
+                            <input type="text" id="num" class="number" value="1">
+                            <input type="button" class="button-num" value="+" id="btnAdd" onclick="addNUM()">
+                            <input type="submit" value="加到購物車">
+                            <font class="inventory">庫存:99</font>  <!--商品剩餘庫存-->
+                        </div>
+                    </p>
+                    </form>
+                    </div>
+                    </div>
 
         <!-- 評論區 -->
 
@@ -111,10 +109,11 @@
                 <!-- 範例評論開頭1 -->
                 <div class="comment-row">
                     <tr>
-                        <td>
+                        <td class="comment-row-hr"> <!--灰色的線-->
                             <div class="comment-left">
                                 <div class="comment-username">
-                                    <hr width="350%">好順利
+                                    <!-- <hr width="350%"> -->
+                                    好順利
                                     <div class="star">
                                         <span class="fa fa-star checked"></span>
                                         <span class="fa fa-star checked"></span>
@@ -149,10 +148,11 @@
 
                 <div class="comment-row">
                     <tr>
-                        <td>
+                        <td class="comment-row-hr">
                             <div class="comment-left">
                                 <div class="comment-username">
-                                    <hr width="350%">羊紙雲
+                                    <!-- <hr width="350%"> -->
+                                    羊紙雲
                                     <div class="star">
                                         <span class="fa fa-star checked"></span>
                                         <span class="fa fa-star checked"></span>
@@ -184,16 +184,17 @@
         </div>
 
         <br><br>
+        <!-- <hr width="20%"> -->
         <!--輸入評論開頭-->
-        <form method="post" class="board-example" action="">
+        <form method="post" class="board-example" action="" id="">
             <!-- 會動的星星 -->
-            <table class="board-table" width="100%">
+            <table class="board-table" width="1000px">
                 <div class="comment-row">
                     <tr>
-                        <td>
+                        <td class="comment-row-hr" width="236.1px">
                             <div class="comment-left">
-                                <div class="comment-username">
-                                    <hr width="20%">黃海膽
+                                <div class="comment-left-username">
+                                    黃海膽
                                     <div class="star">
                                         <!-- <form action="" method="post"> -->
                                         <div class="rating">
@@ -219,7 +220,7 @@
 
                         <td>
                             <div class="comment-right">
-                                <textarea rows="5" cols="80" placeholder="留下您對於商品的評論....">
+                                <textarea rows="5" cols="70" placeholder="留下您對於商品的評論....">
                                 </textarea>
 
                             </div>
@@ -239,6 +240,8 @@
     <!-- <footer >
         123456
     </footer> -->
+
+    <script src="assets/js/button_add_minus.js"></script>
 </body>
 
 </html>
