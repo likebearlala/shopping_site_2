@@ -72,26 +72,53 @@
                     <th>單價</th>
                     <th>數量</th>
                     <th>總計</th>
+                    <th>修改</th>
                 </tr>
                 <tr>
                     <td>曾粉 海味叻沙 Seafood Laksa</td>
                     <td>NT$198</td>
-                    <td><select>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                        </select></td>
+                    <td>
+                        <p>
+                            <div class="button"> <!--購買數量-->
+                                <input type="button" class="button-num" value="-" onclick="minusNUM(0)">
+                                <input type="text" class="number" value="1">
+                                <input type="button" class="button-num" value="+" onclick="addNUM(0)">
+                            </div>
+                        </p>
+                    </td>
                     <td>NT$594</td>
+                    <td><input type="button"  class="delete" value="刪除" onclick="deleteTR(this)"></td>
                 </tr>
-                <div class="NEXT">
-                    <input type="submit" value="下一步" />
-                </div>
 
-
+                <tr>
+                    <td>千拌麵∣醋香麻醬 (3包/袋)</td>
+                    <td>NT$189</td>
+                    <td>
+                        <p>
+                            <div class="button"> <!--購買數量-->
+                                <input type="button" class="button-num" value="-" onclick="minusNUM(1)">
+                                <input type="text" class="number" value="1">
+                                <input type="button" class="button-num" value="+" onclick="addNUM(1)">
+                            </div>
+                        </p>
+                    </td>
+                    <td>NT$567</td>
+                    <td><input type="button" value="刪除" class="delete" onclick="deleteTR(this)"></td> <!--刪除商品-->
+                </tr>
             </table>
+
+
+            <!-- 下一步按鈕 -->
+            <div class="NEXT">
+                <input type="submit" value="下一步" />
+            </div>
+
         </form>
     </section>
+
+
+<script src="assets/js/button_add_minus.js"></script>
+<script src="assets/js/cart_delete.js"></script>
 </body>
 
 </html>

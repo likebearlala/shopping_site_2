@@ -1,13 +1,13 @@
-function minusNUM(){
 
-	let value = Number(document.getElementById('num').value);
-	if(value != 1){
-document.getElementById("num").value = value-1;
+function minusNUM(num){
+	let input = Number(document.getElementsByClassName("number")[num].value);
+	if(input != 1){
+		document.getElementsByClassName('number')[num].value=input-1;
 	}
 }
-function addNUM(){
-
-	let value = Number(document.getElementById('num').value);
-	
-document.getElementById('num').value = value+1;
+function addNUM(num){
+	let input = Number(document.getElementsByClassName("number")[num].value);
+		document.getElementsByClassName('number')[num].value=input+1;
 }
+
+

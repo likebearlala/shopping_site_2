@@ -1,5 +1,6 @@
 .shop_cart th,td{
-    border: 1px solid black;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
 }
 .shop_cart{
     position: relative;
@@ -23,4 +24,17 @@ body{
 .NEXT{
     position: relative;
     margin-top: 5px;
+}
+
+td{
+    text-align: center;
+}
+th{
+    text-align: center;
+    background-color: #647687;
+    color: white;
+}
+.delete :hover {
+    cursor: pointer;
+    color: red;
 }
