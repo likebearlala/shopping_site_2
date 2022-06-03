@@ -30,7 +30,10 @@
   font-weight: bold;
   line-height: 1;
  }
-
+th{
+  text-align: center;
+  margin: auto;
+}
  /* 存貨 */
  .inventory{
     font-size:16px;
@@ -55,6 +58,10 @@
   width:250px;
   margin:0px auto;
   padding:0px;
+}
+table{
+  background-color: azure;
+  border-radius: 2em 2em;
 }
 /* 使用者名稱 */
 .comment-left-username{

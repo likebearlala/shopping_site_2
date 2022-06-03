@@ -1,0 +1,11 @@
+body{
+    background-color: #EAE0D5;
+    box-sizing: content-box;
+}
+
+section {
+    margin: 10%;
+    padding: 25%;
+    background-color: rgb(219, 196, 126);
+    border-radius: 2em;
+}

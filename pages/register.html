@@ -6,17 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>有料|會員註冊</title>
-    <link rel="stylesheet" href="assets/css/all.css">
-    <link rel="stylesheet" href="assets/css/register.css">
-    <script>
-        function check() { //檢查密碼與確認密碼的值有沒有一致
-            var password1 = document.getElementById("password").value;
-            var password2 = document.getElementById("check_password").value;
-            if (password1 != password2) {
-                alert("密碼不一致請核查");
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <link rel="stylesheet" href="../assets/css/register.css">
 </head>
 
 <body>
@@ -25,16 +16,16 @@
         <!--LOGO有料-->
         <div class="t-logo">
             <a href="index.html">
-                <img src="assets/images/icon/logo.png" width="100px" alt="有料">
+                <img src="../assets/images/icon/logo.png" width="100px" alt="有料">
             </a>
         </div>
         <!--頁面選單-->
         <nav>
             <div class="t-showProducts">
-                <a href="#">有料的麵</a>
+                <a href="products_ALL.html">有料的麵</a>
             </div>
             <div class="t-MemberCenter">
-                <a href="#">會員中心</a>
+                <a href="member_center.html">會員中心</a>
             </div>
             <div class="t-aboutUS">
                 <a href="#">關於有料</a>
@@ -45,13 +36,13 @@
             <div class="t-i-user">
                 <a href="#">
                     <!--前往會員登入註冊頁-->
-                    <img src="assets/images/icon/user.png" width="40px" alt="會員">
+                    <img src="../assets/images/icon/user.png" width="40px" alt="會員">
                 </a>
             </div>
             <div class="t-i-cart">
                 <a href="#">
                     <!--前往購物車頁-->
-                    <img src="assets/images/icon/shopping-cart.png" width="40px" alt="購物車">
+                    <img src="../assets/images/icon/shopping-cart.png" width="40px" alt="購物車">
                 </a>
             </div>
         </div>
@@ -60,7 +51,7 @@
             <form class="searchForm">
                 <input type="text" class="searchText" placeholder="Search...">
                 <button type="submit" class="searchIcon">
-                    <img src="assets/images/icon/search.png" width="20px">
+                    <img src="../assets/images/icon/search.png" width="20px">
                 </button>
             </form>
         </div>
@@ -80,22 +71,22 @@
                         <tr>
                             <th colspan="3">
                                 <div>
-                                    <img class="member_register-userphoto" src="assets/images/others/user.png">
+                                    <img class="member_register-userphoto" src="../assets/images/others/user.png">
                                 </div>
                             </th>
                         </tr>
                         <tr>
-                            <td>姓名:</td>
-                            <td class="member_register-td"><input type="text" name="username" size="15"
+                            <td>姓名:</td>  <!--姓名-->
+                            <td class="member_register-td"><input type="text" name="username" size="15" 
                                     placeholder="Username" /></td>
                         </tr>
                         <tr>
-                            <td>電子郵件:</td>
+                            <td>電子郵件:</td> <!--電子郵件-->
                             <td class="member_register-td"><input type="email" name="email" size="30"
                                     placeholder="Email" /></td>
                         </tr>
                         <tr>
-                            <td>密碼:</td>
+                            <td>密碼:</td> <!--密碼-->
                             <td class="member_register-td"><input type="password" name="password" id="password"
                                     required="required" placeholder="Password" /></td>
                         </tr>
@@ -118,6 +109,7 @@
             </div>
         </div>
     </section>
+    <script src="../assets/js/check_password.js"></script> <!--檢查密碼值是否一致-->
 </body>
 
 </html>

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/all.css">
-    <link rel="stylesheet" href="assets/css/signIn.css">
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <link rel="stylesheet" href="../assets/css/signIn.css">
     <title>有料|登入</title>
 </head>
 
@@ -16,16 +16,16 @@
         <!--LOGO有料-->
         <div class="t-logo">
             <a href="index.html">
-                <img src="assets/images/icon/logo.png" width="100px" alt="有料">
+                <img src="../assets/images/icon/logo.png" width="100px" alt="有料">
             </a>
         </div>
         <!--頁面選單-->
         <nav>
             <div class="t-showProducts">
-                <a href="#">有料的麵</a>
+                <a href="products_ALL.html">有料的麵</a>
             </div>
             <div class="t-MemberCenter">
-                <a href="#">會員中心</a>
+                <a href="member_center.html">會員中心</a>
             </div>
             <div class="t-aboutUS">
                 <a href="#">關於有料</a>
@@ -36,13 +36,13 @@
             <div class="t-i-user">
                 <a href="#">
                     <!--前往會員登入註冊頁-->
-                    <img src="assets/images/icon/user.png" width="40px" alt="會員">
+                    <img src="../assets/images/icon/user.png" width="40px" alt="會員">
                 </a>
             </div>
             <div class="t-i-cart">
                 <a href="#">
                     <!--前往購物車頁-->
-                    <img src="assets/images/icon/shopping-cart.png" width="40px" alt="購物車">
+                    <img src="../assets/images/icon/shopping-cart.png" width="40px" alt="購物車">
                 </a>
             </div>
         </div>
@@ -51,7 +51,7 @@
             <form class="searchForm">
                 <input type="text" class="searchText" placeholder="Search...">
                 <button type="submit" class="searchIcon">
-                    <img src="assets/images/icon/search.png" width="20px">
+                    <img src="../assets/images/icon/search.png" width="20px">
                 </button>
             </form>
         </div>
@@ -59,15 +59,14 @@
     <!--網頁最上方固定欄結束-->
 
 
-    <!-- 登入 -->
+    <!-- 登入頁面 -->
     <section>
-        <template>
         <div class="sign_in">
             <form method="post" action="">
-                <img src="assets/images/others/others_noodles-1.png" width="10%" height="10%">
+                <img src="../assets/images/others/others_noodles-1.png" width="10%" height="10%">
                 <h2>會員登入</h2>
-                <p>帳號: <input type="email" name="user_email" placeholder="Email" id="user_email" /> </p>
-                <p>密碼: <input type="password" name="user_password" placeholder="Password" id="user_password"/></p>
+                <p>帳號: <input type="email" name="user_email" placeholder="Email" id="user_email" /> </p>  <!--帳號-->
+                <p>密碼: <input type="password" name="user_password" placeholder="Password" id="user_password" /></p>   <!--密碼-->
                 <div class="button click">
                     <input class="button" type="submit" value="登入" onclick="IfNull()" />
                     <input class="button" type="reset" value="重填" />
@@ -75,10 +74,8 @@
                 <div class="register">
                     還沒註冊?<a href="register.html">前往註冊</a>
                 </div>
-
             </form>
         </div>
-        </template>
     </section>
 </body>
 

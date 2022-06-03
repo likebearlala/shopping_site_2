@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結帳頁面</title>
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/cart_checkout.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <!--網頁最上方固定欄-->
+        <!--LOGO有料-->
+        <div class="t-logo">
+            <a href="../index.html">
+                <img src="../assets/images/icon/logo.png" width="100px" alt="有料">
+            </a>
+        </div>
+        <!--頁面選單-->
+        <nav>
+            <div class="t-showProducts">
+                <a href="#">有料的麵</a>
+            </div>
+            <div class="t-MemberCenter">
+                <a href="#">會員中心</a>
+            </div>
+            <div class="t-aboutUS">
+                <a href="#">關於有料</a>
+            </div>
+        </nav>
+        <!--會員及購物車圖標-->
+        <div class="t-icon">
+            <div class="t-i-user">
+                <a href="#">
+                    <!--前往會員登入註冊頁-->
+                    <img src="../assets/images/icon/user.png" width="40px" alt="會員">
+                </a>
+            </div>
+            <div class="t-i-cart">
+                <a href="#">
+                    <!--前往購物車頁-->
+                    <img src="../assets/images/icon/shopping-cart.png" width="40px" alt="購物車">
+                </a>
+            </div>
+        </div>
+        <!--搜尋欄-->
+        <div class="t-search">
+            <form class="searchForm">
+                <input type="text" class="searchText" placeholder="Search...">
+                <button type="submit" class="searchIcon">
+                    <img src="../assets/images/icon/search.png" width="20px">
+                </button>
+            </form>
+        </div>
+    </header>
+    <!--網頁最上方固定欄結束-->
+
+    <!--購買資訊填寫-->
+    <section>
+        <form method="post" action="">
+            寄送方式:<br><select size="1" name="SendWay">
+                        <option>7-11取貨</option>
+                        <option>全家取貨</option>
+                        <option>宅配到府</option>
+                    </select>
+                    <br>
+            付款方式:<br><select size="1" name="PayWay">
+                        <option>貨到付款(現金)</option>
+                        <option>信用卡/金融卡</option>
+                    </select>
+                    <br>
+            地址:<br> <input type="text" name="PostalCode" placeholder="郵遞區號" maxlength="5" size="8" /> &nbsp;
+            <input type="text" name="address" placeholder="地址" maxlength="25" size="25" />
+        </form>
+    </section>
+</body>
+</html>
