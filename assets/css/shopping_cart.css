@@ -41,7 +41,26 @@ th{
     background-color: #647687;
     color: white;
 }
-.delete :hover {
+
+
+/* 前往結帳button外觀 */
+.buttonLOOK{border:0;
+    background-color:#22333B;
+    color:#fff;
+    border-radius:10px;
+    cursor:pointer;
+    width:150px;
+    height:50px
+}
+  
+ input:hover {
+    color:#D79B00;
+    background-color:#fff;
+    border:2px #D79B00;
+  }
+
+
+/* .delete :hover {
     cursor: pointer;
     color: red;
-}
+} */
