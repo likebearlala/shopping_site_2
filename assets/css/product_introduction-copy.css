@@ -1,3 +1,9 @@
+section{
+  max-width: 1200px;
+  width: 100%;
+}
+
+
 /* 商品區排版 */
 .Row{
     width: 100%;
