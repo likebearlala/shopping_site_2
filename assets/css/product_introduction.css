@@ -159,3 +159,18 @@ body{
   align-items: center;
   width: 100%;
 }
+/* button外觀 */
+.buttonLOOK{border:0;
+  background-color:#22333B;
+  color:#fff;
+  border-radius:10px;
+  cursor:pointer;
+  width:150px;
+  height:50px
+}
+
+input:hover {
+  color:#D79B00;
+  background-color:#fff;
+  border:2px #D79B00;
+}
