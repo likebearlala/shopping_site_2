@@ -108,7 +108,7 @@ if(session.getAttribute("user_email") != null ){
                             <input type="password" placeholder="密碼" name="user_password" value=""><br>
                             <input type="password" placeholder="確認密碼" name="checkpwd" value="">
                             <button type="submit" class="reset_data">
-                                <img src="assets/images/others/pencil.png" width="35px">
+                                <img src="../assets/images/others/pencil.png" width="35px">
                                 <h5>確認更改</h5>
                             </button>
                         </form>

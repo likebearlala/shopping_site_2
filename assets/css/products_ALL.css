@@ -19,7 +19,7 @@ aside div a {
 }
 
 section {
-    margin: 120px 60px;
+    margin: 120px 60px auto;
     border: #c9c2bbde solid;
     border-radius: 1%;
     float: right;
@@ -47,6 +47,9 @@ section {
 .products {
     padding: 1%;
     margin: 2%;
+    margin-left: 1%;
+    margin-bottom: 2%;
+    width: 50%;
 }
 .products p {
     text-align: center;
@@ -55,4 +58,10 @@ section {
 .products a {
     text-decoration: none;
     color: #22333B;
+}
+.products img{
+    width: 100%;
+    height: 75%;
+    margin: 15px;
+
 }
