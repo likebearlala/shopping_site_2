@@ -59,61 +59,92 @@
         </div>
     </header>
     <!--網頁最上方固定欄結束-->
+    <br><br>
 
 
-    <!-- 商品介紹頁面 -->
-<section>
-    <div class="Cols">
-        <div class="Row">
-            <div class="Row-left">
-                <div class="row-left-photo"> <!--商品圖片-->
-                    <img src="../assets/images/products/zeng_guocheng00.jpg" width="500px" height="500px">
-                </div>
+<!-- 商品介紹頁面 -->
+
+<section class="product_top">
+   <!--商品圖片-->
+   <div class="TOPbody">
+            <div class="image">
+                <img src="../assets/images/products/chia03.jpg" >
             </div>
+            <div class="text">
+                <form method="post" action="">
+                        <h2>千拌麵∣辣豆瓣金盞花麵 (3包/袋)</h2> <!--商品名字-->
+                        <h2 class="price">NT$168</h2> <!--商品價格-->
 
-            <div class="Row-right">
-                <form method="post">
-                    <div>
-                        <h2>曾粉 海味叻沙 Seafood Laksa</h2> <!--商品名字-->
-                    </div>
-                    <div>
-                        <h3>NT$198</h3> <!--商品價格-->
-                    </div>
-                    <div>
-                        <ul> <!--商品介紹-->
-                            <li>成分含蝦。</li>
-                            <li>辛辣程度：微辣。</li>
-                            <li>使用宜蘭老字號虎牌米粉，乾湯兩吃，美味升級。</li>
-                            <li>濃郁咖哩與香甜椰漿熬製，充滿異國風味，濃而不膩。</li>
-                        </ul>
-                    </div>
                     <p>
                         <div class="button">數量： <!--購買數量-->
                             <input type="button" class="button-num" value="-" onclick="minusNUM(0)">
                             <input type="text" class="number" value="1">
                             <input type="button" class="button-num" value="+" onclick="addNUM(0)">
-                            <input type="submit" class="buttonLOOK" value="加到購物車">
                             <font class="inventory">庫存:99</font>  <!--商品剩餘庫存-->
+                            <input type="submit" class="buttonLOOK" value="加到購物車">
                         </div>
                     </p>
                 </form>
             </div>
         </div>
+</section>
 
-        <!-- 評論區 -->
-        <div class="board">
-            <table class="board-table" width="1000px">
-                <tr>
-                    <th><h3>商品評論</h3></th>
-                </tr>
+
+ <!--商品介紹-->
+
+
+    <section class="product_intro">
+        <div class="title">
+            <h2>商品介紹</h2>
+        </div>
+        <hr width="100%">
+            
+                <div class="introduction">
+                    <ul>
+                        <li>成分含蝦。</li>
+                        <li>辛辣程度：微辣。</li>
+                        <li>使用宜蘭老字號虎牌米粉，乾湯兩吃，美味升級。</li>
+                        <li>濃郁咖哩與香甜椰漿熬製，充滿異國風味，濃而不膩。</li>
+                    </ul>
+                </div>
+    </section>
+
+
+<!-- 留言板 -->
+<br>
+
+    <section class="product_comment">
+        <h2 class="title">商品評論</h2>
+                    <form method="post" action="">
+                        <hr width="100%"><br><br><br>
+                    <p>
+                        <div class="comment-userphoto">
+                            <img class="userphoto" src="../assets/images/others/user.png" 
+                            width="125px" height="125px">  <!--使用者圖片-->
+                        </div>
+                        <h3 class="username">有廖美女</h3> <!--使用者姓名-->
+                    </p>
+                    <p> <div class="star">
+                                <div class="my-rating-6"></div>
+                                    <input type="hidden" id="test" name="star" > <!--會傳值的星星-->
+                                </div>
+                    </p> 
+                        <p><textarea rows="5" cols="70" placeholder="留下您對於商品的評論...." ></textarea></p> <!-- 輸入評論-->
+                        
+                        <p><input type="submit" class="buttonLOOK" value="留下評論" ></p>
+                    </form>
+                    <br><br><br>
+                    <!--寫死的留言板-->
+                    <hr>
+
+
                 <!-- 範例評論開頭1 -->
-                <div class="comment-row">
-                    <tr>
-                        <td class="comment-row-hr"> <!--灰色的線-->
-                            <div class="comment-left">
-                                <div class="comment-username">
-                                    <!-- <hr width="350%"> -->
-                                    好順利
+                <br><br>
+                <div class="comment-userphoto">
+                    <img  src="../assets/images/others/user.png"
+                        width="75px" height="75px">
+                </div>
+                                <div>好順利</div>
                                     <div class="star">
                                         <span class="fa fa-star checked"></span>
                                         <span class="fa fa-star checked"></span>
@@ -121,120 +152,28 @@
                                         <span class="fa fa-star checked"></span>
                                         <span class="fa fa-star checked"></span>
                                     </div>
-                                </div>
-                                <div class="comment-userphoto">
-                                    <img class="member_register-userphoto" src="../assets/images/others/user.png"
-                                        width="125px" height="125px">
-                                </div>
-                            </div>
-                        </td>
-
-                        <td>
-                            <div class="comment-right">
+                                    <p class="comment-timestamp">2022-04-27 01:46:45 </p>
+                      
                                 拿到貨好快好順利!!拆封後煮來吃，確實很好吃!!
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="comment-timestamp">YYYY-MM-DD HH:MI:SS </td>
-                        <td align="right"></td>
-                    </tr>
-                </div>
+                            
+
+                      
                 <!-- 範例評論結尾 -->
 
 
-                <!-- 範例評論開頭2 -->
+               
+    </section>
 
+   
 
-                <div class="comment-row">
-                    <tr  class="comment-row-hr">
-                        <td class="comment-row-hr">
-                            <div class="comment-left">
-                                <div class="comment-username">
-                                    羊紙雲
-                                    <div class="star">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                    </div>
-                                </div>
-                                <div class="comment-userphoto">
-                                    <img class="member_register-userphoto" src="../assets/images/others/user.png"
-                                        width="125px" height="125px">
-                                </div>
-                            </div>
-                        </td>
+   
 
-                        <td class="comment-row-hr">
-                            <div class="comment-right">
-                                吼吼吃!!我要買十打!!
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="comment-timestamp">YYYY-MM-DD HH:MI:SS </td>
-                        <td align="right"></td>
-                    </tr>
-                </div>
-            </table>
-            <!-- 範例評論結尾 -->
-        </div>
-
-        <br><br>
-        <!-- <hr width="20%"> -->
-        <!--輸入評論開頭-->
-        <form method="post" class="board-example" action="../assets/jsp/star.jsp" id="">
-            <!-- 會動的星星 -->
-            <table class="board-table" width="1000px">
-                <div class="comment-row">
-                    <tr>
-                        <td class="comment-row-hr" width="236.1px">
-                            <div class="comment-left">
-                                <div class="comment-left-username">
-                                    黃海膽
-                                <div class="star">
-                                    <div class="my-rating-6"></div>
-                                        <input type="hidden" id="test" name="star" >
-                                </div>
-                                </div>
-                                
-
-                                <div class="comment-userphoto">
-                                    <img class="member_register-userphoto" src="../assets/images/others/user.png"
-                                        width="125px" height="125px">
-                                </div>
-                            </div>
-                        </td>
-
-                        <td>
-                            <div class="comment-right">
-                                <textarea rows="5" cols="70" placeholder="留下您對於商品的評論....">
-                                </textarea>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="comment-timestamp"> </td>
-                        <td class="comment-submit" align="right"><input type="submit" class="buttonLOOK" value="提交評論" name="submit"
-                                 id="comment-right-button" /></td>
-                    </tr>
-                </div>
-            </table>
-        </form>
-    </div>
-</section> 
-    <!-- 輸入評論結尾 -->
-
-    <!-- <footer >
+    <footer >
         123456
-    </footer> -->
+    </footer>
 
-    <!-- 星星 -->
-    <script>
 
-        </script>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="../assets/js/jquery.star-rating-svg.js"></script>
     <script src="../assets/js/jquery.star-rating-svg.min.js"></script>

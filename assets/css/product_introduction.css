@@ -1,172 +1,170 @@
-/* 商品區排版 */
-.Row{
-    width: 100%;
-    padding: 0 22% 0;
-    padding-top: 150px;
-    display: flex;
-    justify-content: space-around;
-    box-sizing: content-box;
+body{
+  max-width: 100%;
 }
-.Row-left{
-    margin: 0% auto;
-    padding: 0% 4%;
-    float: left;
-} 
-.Row-right{
-    margin: 0% auto;
-    padding: 0% 4%;
-    text-align: left;
-    float: right;
-    line-height: 2;
+.TOPbody{ 
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
 }
-.Row-right h2 {
- margin-top: 20px;
- font-weight: bold;
- line-height: 2;
-}
-.Row-right h3 {
-  font-size: 25px;
-  margin: 10px 0 10px 5px;
-  font-weight: bold;
-  line-height: 1;
- }
-th{
-  text-align: center;
-  margin: auto;
-}
- /* 存貨 */
- .inventory{
-    font-size:16px;
-    margin-left: 2%;
- }
 
- /* 評論區排版 */
-.comment-row{
-  background-color: black;
+.product_top{
+  max-width: 1200px;
+  padding: 3%;
+  margin: 5% auto;
+  margin-top: 8%;
+  /* background-color: rgba(255, 250, 250, 0.8); */
+  border-radius: 20px 20px;
+  border: 2px solid gray;
+  width: 70%;
+  height: 50%;
 }
-.member_register-userphoto{
-  padding: 2px;
-  border-radius: 50%;
+
+.product_intro{
+  max-width: 1200px;
+  padding: 3%;
+  margin: 0% auto;
+  margin-top: 8%;
+  /* section2 */
+  border-radius: 20px 20px;
+  border: 2px solid gray;
+  width: 70%;
+  height: 50%;
+  line-height: 3em;
+}
+
+.product_comment{
+  max-width: 1200px;
+  padding: 3%;
+  margin: 3% auto;
+  margin-top: 8%;
+  /* section3 */
+  border-radius: 20px 20px;
+  border: 2px solid gray;
+  width: 70%;
+  height: 50%;
+}
+
+.price{ 
+  color: red;
+  font-weight: bold;
+}
+.image{
+  /* padding: 1em; */
+  padding-bottom: 2em;
+  /* margin: 0 auto; */
+  position: relative;
+  width: 35%;
+  max-height: auto;
+  border: 2px solid red;
+  align-items: center;
+  justify-content: center;
+}
+.image img{
+  max-width: 370px;
+  height: auto;
+  overflow: hidden;
   border: 1px solid black;
 }
-.comment-right{
-  text-align: left;
-  padding: 5%;
+.text{  /*商品*/
+  /* margin: 5px; */
+  width: 60%;
+  padding: 5px;
+  border:2px solid  #22333B;
+  /* align-items: center;
+  justify-content: center;
+  margin: auto; */
+  line-height: 4;
+}
+.inventory{ /*庫存*/
+  color:#22333B;
+}
+.title{
+  padding-bottom: 1dem;
+  /* margin: left; */
 }
 
-.board-example{
-  width:250px;
-  margin:0px auto;
-  padding:0px;
+.introduction{
+  margin: left;
+}
+
+@media(max-width:1200px) {
+  .image {
+      width: 32%;
+  }
+  /* .section{
+    margin-top: 40%;
+    margin: 80%;
+  } */
+}
+
+@media(max-width:768px) {
+  .image {
+      width: 46%;
+  }
+  /* .section{
+    margin-top: 40%;
+    margin: 80%;
+  } */
+}
+
+@media(max-width:569px) {
+  .image {
+      width: 96%;
+  }
+  /* .section{
+    margin-top: 30%;
+  } */
 }
 
 /* 使用者名稱 */
-.comment-left-username{
-  text-align: center;
+.username{
+  padding: 1em;
+  font-size: 1.2em;
 }
-/* 大頭貼 */
-.comment-userphoto{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.userphoto{
+  padding: .5em;
 }
-
-.table-center{
-  position: relative;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-}
-/* 時間 */
 .comment-timestamp{
-  font-size: 18px;
+  /* font-size: 18px; */
   color:gray;
-  text-align: center;
 }
 
-hr {
-  text-align: center;
-}
 
-.comment-row-hr{
-  border-top: 1px solid gray;
-  text-align: center;
-}
 
-.comment-submit{
-  position: relative;
-  display: flex;
-  justify-content: right;
-  align-items: right;
-  padding-bottom: 10%;
-  /* background-color: #444; */
-}
-
-/* 提交評論button */
-#comment-right-button{
-  margin-bottom: 10%;
-}
 
 /* 會動的星星 */
-
-
 .board {
     width:250px;
     margin:0px auto;
   }
-  
   .my-rating-6 {
     display: flex;
     justify-content: space-between;
   }
   .star{
     position: relative;
-    justify-content:center;
-    align-items: center;
-    margin: auto;
-    width: 60%;
-  }
-  
-
-body{
-    background-color: #EAE0D5;
+    justify-content:left;
+    align-items: left;
+    /* margin: auto; */
+    width: 15%;
     display: inline-block;
-}
+    white-space: nowrap;
+    overflow: hidden;
+  }
   /* 不會動的星星 */
   .checked {
     color: orange;
   }
-
-
-  /* rwd */
-  /* @media screen (min-width:820px) {
-    
-  } */
-
-
-.test1{
-  margin: 5%auto;
-  padding: 5%;
-  margin-left: 5%;
-  border-radius: 2em 2em;
-  border: 1px solid black;
-  text-align: center;
-  background-color:blanchedalmond;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-/* button外觀 */
-.buttonLOOK{border:0;
+/* Button外觀 */
+.buttonLOOK{
+  border:0;
   background-color:#22333B;
   color:#fff;
   border-radius:10px;
   cursor:pointer;
   width:150px;
-  height:50px
+  height:50px;
+  margin: 1%;
 }
 
 input:hover {
@@ -174,3 +172,5 @@ input:hover {
   background-color:#fff;
   border:2px #D79B00;
 }
+
+
