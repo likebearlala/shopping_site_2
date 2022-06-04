@@ -26,51 +26,80 @@ section {
     width: 77%;
 }
 
+.memberdata{
+    padding: 0% 5%;
+}
 .memberdata_tital {
     padding: 3% 0 0;
     text-align: center;
     font-size: 30px;
     font-weight: bolder;
 }
-.memberdata table {
-    margin: 0 auto;
-    width: 70%;
+.memberdata_all {
+    display: flex;
+    justify-content: space-around;
 }
-.memberdata img {
+.memberout {
+    padding: 4%;
+}
+.memberout img {
     border-radius: 10px;
-    margin: 0% 30% 35% 20%;
+    margin: 0%;
     background-color: #22333B;
 }
-.memberdata form {
-    padding-left: 15%;
+.memberdata_content {
+    padding: 2.5% 0;
+}
+.memberdata_content form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    justify-content: space-around;
+}
+.md-inputtwo p {
+    text-align: center;
+    margin-bottom: 0%;
+    color: hsla(29, 100%, 50%, 0.871);
+}
+.md-inputone {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .memberdata input {
+    background-color: white;
     border: none;
     border-bottom: 1px solid gray;
     padding: 10px;
-    margin: 20px 60px 20px 30px;
+    margin: 20px;
     font-size: 16px;
     letter-spacing: 0.2em;
     width: 350px;
 }
-
-.reset_data {
-    margin: 20px 0px 40px 100px;
+.md-form_button {
     display: flex;
-    width: 50%;
-    padding: 0 6% ;
+    width: 60%;
+    justify-content: space-around;
+}
+.reset_data {
+    margin: 0;
+    padding: 0;
+    display: flex;
     border: none;
-    border-radius: 25px;
+    border-radius: 10px;
     background-color: #f8f1e9;
     box-shadow: 5px 6px 0 #22333B;
 }
-.reset_data img {
+.activebtn img {
     border-radius: 0%;
     margin: 5% 10% 5% 0;
     background-color: #f8f1e9;
 }
-.reset_data h5 {
-    margin-top: 10%;
+.changebtn .activebtn div:first-child.active {
+    display: none;
+}
+.changebtn button div:first-child.active+div:last-child {
+    display: block;
 }
 
 .section-2 {

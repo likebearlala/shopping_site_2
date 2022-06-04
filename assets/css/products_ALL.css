@@ -59,14 +59,15 @@ section {
     text-decoration: none;
     color: #22333B;
 }
-.frame{
+/*.frame{
     padding: 1em;
     margin: 0 auto;
     position: relative;
     width: 100%;
     max-height: auto;
 
-}
+}*/
+
 .products img{
     max-width: 370px;
     height: 70%;
