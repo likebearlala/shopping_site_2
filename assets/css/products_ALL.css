@@ -47,7 +47,7 @@ section {
 .products {
     padding: 1%;
     margin: 2%;
-    margin-left: 1%;
+    margin-left: 2%;
     margin-bottom: 2%;
     width: 50%;
 }
@@ -59,9 +59,29 @@ section {
     text-decoration: none;
     color: #22333B;
 }
-.products img{
+.frame{
+    padding: 1em;
+    margin: 0 auto;
+    position: relative;
     width: 100%;
-    height: 75%;
-    margin: 15px;
+    max-height: auto;
 
+}
+.products img{
+    max-width: 370px;
+    height: 70%;
+    overflow: hidden;
+    margin: 15px auto;
+}
+
+@media(max-width:768px) {
+    .products {
+        height: 46%;
+    }
+}
+
+@media(max-width:569px) {
+    .products {
+        height: 96%;
+    }
 }
