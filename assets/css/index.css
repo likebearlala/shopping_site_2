@@ -1,0 +1,29 @@
+.bestsell {
+    margin: 5px 15px 25px;
+}
+.bestsell-title {
+    background-color: #647687;
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+    padding: 10px 30px;
+}
+.bestsell-title img {
+    margin: 0 15px 3px;
+}
+.bestsell-number {
+    display: flex;
+    flex-direction: row;
+    margin: 0%;
+    padding: 2% 0;
+    justify-content: space-around;
+}
+.bestsellnum {
+    width: 400px;
+}
+.bestsellnum img {
+    border-radius: 15px;
+}
+.medal_img {
+    margin: 1% 37%;
+}
