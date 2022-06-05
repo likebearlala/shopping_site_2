@@ -101,6 +101,18 @@ footer {
     height:35px;
     cursor:pointer;
     }
+.button-num-add{
+        border:1px solid lightgray;
+        width:25px;
+        height:35px;
+        cursor:pointer;
+    }
+.button-num-minus{
+    border:1px solid lightgray;
+    width:25px;
+    height:35px;
+    cursor:pointer;
+}
     
     .number{
     border:none;

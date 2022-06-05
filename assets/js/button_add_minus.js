@@ -1,7 +1,7 @@
 
 
 function minusNUM(num){
-	var input = Number(document.getElementsByClassName("number")[num].value);
+	let input = Number(document.getElementsByClassName("number")[num].value);
 	if(input != 1){
 		document.getElementsByClassName('number')[num].value=input-1;
 	}
@@ -11,6 +11,9 @@ function addNUM(num){
 		document.getElementsByClassName('number')[num].value=input+1;
 }
 
+
+
+// for(var num=0;num<=)
 // function debug(num){
 // 	let input = Number(document.getElementsByClassName("number")[num].value);
 // 	if( input >0){

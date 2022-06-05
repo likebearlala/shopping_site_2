@@ -111,13 +111,32 @@
                     <br>
                     地址:桃園市中壢區中北路200號
                     <br>
-                    <div class="NEXT" id="next">
-                            <input type="submit" value="確認" class="buttonLOOK" onclick="" />
+                <div class="flex">
+                    <div class="NEXT">
+                        <input type="submit" value="回上一頁" class="buttonLOOK" onclick="goback()" />
                     </div>
+                    <div class="NEXT">
+                            <input type="submit" value="確認" class="buttonLOOK"  onclick="location.href='cart_checkout'" />
+                    </div>
+                </div> 
                 </div>
             </div>
         </form>
     </section>
 
+    <script>
+        function success(){
+    alert("結帳成功!");
+    // location.replace("../../index.html");
+    window.location.href = '../../index.html';
+}
+function goback(){
+    location.replace("cart_checkout.html");
+    window.location.href = 'cart_checkout.html';
+    alert("結帳成功!");
+
+}
+    </script>
+    <script src="../assets/js/success.js"></script>
 </body>
 </html>

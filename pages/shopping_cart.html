@@ -78,17 +78,17 @@
                 </tr>
                 <tr class="shop_cart-tr">
                     <td>曾粉 海味叻沙 Seafood Laksa</td>
-                    <td class="price">NT$198</td>
+                    <td class="price">198</td>
                     <td>
                         <p>
                             <div class="button"> <!--購買數量-->
-                                <input type="button" class="button-num" value="-" onclick="minusNUM(0)">
-                                <input type="text" class="number" value="1">
-                                <input type="button" class="button-num" value="+" onclick="addNUM(0)">
+                                <input type="button" class="button-num-add" value="-" onclick="minusNUM(0)">
+                                <input type="text" class="number" value="1" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">
+                                <input type="button" class="button-num-minus" value="+" onclick="addNUM(0)">
                             </div>
                         </p>
                     </td>
-                    <td class="amount">NT$594
+                    <td class="amount">594
                         <em class="show_amount"></em> <!--cart_count.js 自動算出總價-->
                     </td> <!--總價-->
                     <td><input type="button"  class="delete" value="刪除" onclick="deleteTR(this)"></td>
@@ -96,17 +96,17 @@
 
                 <tr class="shop_cart-tr">
                     <td>千拌麵∣醋香麻醬 (3包/袋)</td>
-                    <td class="price">NT$189</td>
+                    <td class="price">189</td>
                     <td>
                         <p>
                             <div class="button"> <!--購買數量-->
-                                <input type="button" class="button-num" value="-" onclick="minusNUM(1)"> <!--onclick裡面的數字為商品品項數量(從0開始算)-->
-                                <input type="text" class="number" value="1">
-                                <input type="button" class="button-num" value="+" onclick="addNUM(1)">
+                                <input type="button" class="button-num-add" value="-" onclick="minusNUM(1)"> <!--onclick裡面的數字為商品品項數量(從0開始算)-->
+                                <input type="text" class="number" value="1" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">
+                                <input type="button" class="button-num-minus" value="+" onclick="addNUM(1)">
                             </div>
                         </p>
                     </td>
-                    <td class="amount">NT$567</td><!--總價-->
+                    <td class="amount">567</td><!--總價-->
                     <td><input type="button" value="刪除" class="delete"></td> <!--刪除商品-->
                 </tr>
 
@@ -114,7 +114,7 @@
                     <td colspan="4" style="text-align: right; padding-right:1em;">
                         商品總額:
                     </td>
-                    <td class="total" >NT$1161</td>
+                    <td class="total" >1161</td>
                 </tr>
 
             <!-- 下一步按鈕 -->
@@ -137,7 +137,7 @@
 
 <script src="../assets/js/button_add_minus.js"></script>
 <script src="../assets/js/cart_delete.js"></script>
-<!-- <script src="../assets/js/cart_count.js"></script> -->
+<script src="../assets/js/cart_count.js"></script>
 </body>
 
 </html>
