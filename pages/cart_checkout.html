@@ -61,72 +61,35 @@
         </header>
         <!--網頁最上方固定欄結束-->
 
-        
+
+        <!--此處為填寫訂單section-->
 <br>
 <div calss="twoROW">
-    <!--確認訂單資訊-->
-    <section width="50%">
-        <h3>確認資訊</h3><hr>
-        <form method="post" action="">
-            <table class="shop_cart">
-                <tr class="shop_cart-tr">
-                    <th>商品品項</th>
-                    <th>單價</th>
-                    <th>數量</th>
-                    <th>總計</th>
-                </tr>
-                <tr class="shop_cart-tr">
-                    <td>曾粉 海味叻沙 Seafood Laksa</td>
-                    <td class="price">NT$198</td>
-                    <td  style="text-align:center;">2<!--購買數量-->
-                    </td>
-                    <td class="amount">NT$594
-                        <em class="show_amount"></em> <!--cart_count.js 自動算出總價-->
-                    </td> <!--總價-->
-                </tr>
 
-                <tr class="shop_cart-tr">
-                    <td>千拌麵∣醋香麻醬 (3包/袋)</td>
-                    <td class="price">NT$189</td>
-                    <td>3<!--購買數量-->
-                    </td>
-                    <td class="amount">NT$567</td><!--總價-->
-                </tr>
-
-                <tr class="shop_cart-tr">
-                    <td colspan="3" style="text-align: right; padding-right:1em;">
-                        商品總額:
-                    </td>
-                    <td class="total" >NT$1161</td>
-                </tr>
-            </table>
-        </form>
-    </section>
-
-    <aside>
-        <!--確認訂單資訊-->
-        <h3>填寫運送資訊</h3><hr>
+    <section>
+        <!--填寫訂單資訊-->
+        <h3>填寫運送資訊</h3>
+        <hr width="100%">
     <form method="post" action="" width="30%">
-        <div class="">
-            寄送方式:<br><select size="1" name="SendWay">
-                    <option>7-11取貨</option>
-                    <option>全家取貨</option>
-                    <option>宅配到府</option>
-                </select>
+        <div class="form-lineheight">
+            購買人:有廖美女<br>
+            手機號碼:<input type="text" name="address" placeholder="手機號碼" maxlength="10" size="12" /><br>
+            寄送方式:<input type="radio" name="SendWay" value="7-11取貨" />7-11取貨
+            <input type="radio" name="SendWay" value="全家取貨" />全家取貨
+            <input type="radio" name="SendWay" value="宅配到府"  checked/>宅配到府
                 <br>
-            付款方式:<br><select size="1" name="PayWay">
-                    <option>貨到付款(現金)</option>
-                    <option>信用卡/金融卡</option>
-                </select>
+            付款方式:<input type="radio" name="PayWay" value="貨到付款(現金)"  checked/>貨到付款(現金)
+                <input type="radio" name="PayWay" value="信用卡/金融"/>信用卡/金融
                 <br>
-            地址:<br>
+            地址:
             <input type="text" name="address" placeholder="地址" maxlength="30" size="32" />
-            <div class="NEXT">
+        </div><br>
+            <div class="NEXT" id="next">
                 <input type="submit" value="前往結帳" class="buttonLOOK" onclick=""/>
             </div>
-        </div>
+
     </form>
-</aside>
+</section>
 
 </div>
 
