@@ -57,23 +57,23 @@
   //         }
   //       }
 
-  var add = document.querySelectorAll(".button-num-add");  
-  var minus = document.querySelectorAll(".button-num-minus");  
-    for (var i = 0; i < add.length; i++) {  
-        add[i].onclick = function () {  
-            var num = Number(this.previousElementSibling.value);  
-            num++;  
-            this.previousElementSibling.value = num;  
-            var price = this.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.innerHTML;  
-            this.nextElementSibling.firstElementChild.innerHTML = price * num;  
-        }  
-    }  
-    for (var i = 0; i < minus.length; i++) {  
-        minus[i].onclick = function () {  
-            var num = Number(this.nextElementSibling.value);  
-            num--;  
-            this.nextElementSibling.value = num;  
-            var price = this.previousElementSibling.firstElementChild.innerHTML;  
-            this.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.innerHTML = price * num;  
-        }  
-    }
+//   var add = document.querySelectorAll(".button-num-add");  
+//   var minus = document.querySelectorAll(".button-num-minus");  
+//     for (var i = 0; i < add.length; i++) {  
+//         add[i].onclick = function () {  
+//             var num = Number(this.previousElementSibling.value);  
+//             num++;  
+//             this.previousElementSibling.value = num;  
+//             var price = this.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.innerHTML;  
+//             this.nextElementSibling.firstElementChild.innerHTML = price * num;  
+//         }  
+//     }  
+//     for (var i = 0; i < minus.length; i++) {  
+//         minus[i].onclick = function () {  
+//             var num = Number(this.nextElementSibling.value);  
+//             num--;  
+//             this.nextElementSibling.value = num;  
+//             var price = this.previousElementSibling.firstElementChild.innerHTML;  
+//             this.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.innerHTML = price * num;  
+//         }  
+//     }
