@@ -16,8 +16,7 @@ function changebtn() {
 }
 
 
+$("#submit").click(function () {
 
-$("#submit").click(function(){
-
-    $("input").prop("disabled",false);
-    });
+    $("input").prop("disabled", false);
+});

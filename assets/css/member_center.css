@@ -19,7 +19,7 @@ aside div a {
 }
 
 section {
-    margin: 120px 60px 70px;
+    margin: 120px 60px 50px;
     border: #c9c2bbde solid;
     border-radius: 10px;
     float: right;
@@ -39,6 +39,7 @@ section {
     display: flex;
     justify-content: space-around;
 }
+
 .memberout {
     padding: 4%;
 }
@@ -47,6 +48,21 @@ section {
     margin: 0%;
     background-color: #22333B;
 }
+
+.sign_out {
+    margin: 30px 50px;
+}
+.sign_out button {
+    margin: 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #22333B;
+    color: #fff;
+    box-shadow: 5px 6px 0 #46819c;
+    font-size: 18px;
+}
+
 .memberdata_content {
     padding: 2.5% 0;
 }
@@ -56,6 +72,7 @@ section {
     width: 800px;
     justify-content: space-around;
 }
+
 .md-inputtwo p {
     text-align: center;
     margin-bottom: 0%;
@@ -66,6 +83,7 @@ section {
     flex-direction: column;
     justify-content: space-between;
 }
+
 .memberdata input {
     background-color: white;
     border: none;
@@ -74,26 +92,55 @@ section {
     margin: 20px;
     font-size: 16px;
     letter-spacing: 0.2em;
-    width: 350px;
+    width: 320px;
 }
 .md-form_button {
+    margin: 40px 100px 0 0;
     display: flex;
-    width: 60%;
+    width: 70%;
     justify-content: space-around;
 }
 .reset_data {
     margin: 0;
-    padding: 0;
-    display: flex;
+    padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    background-color: #f8f1e9;
-    box-shadow: 5px 6px 0 #22333B;
+    background-color: #22333B;
+    color: #fff;
+    box-shadow: 5px 6px 0 #46819c;
+    font-size: 20px;
 }
+
+.changebtn {
+    margin: 0 5%;
+}
+.changebtn img {
+    margin-right: 10px;
+}
+.activebtn {
+    margin: 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #22333B;
+    color: #fff;
+    box-shadow: 5px 6px 0 #46819c;
+    font-size: 20px;
+}
+
+button:hover {
+    color:#D79B00;
+    background-color:#fff;
+    border:2px #D79B00;
+}
+
 .activebtn img {
     border-radius: 0%;
     margin: 5% 10% 5% 0;
     background-color: #f8f1e9;
+}
+.changebtn .activebtn div:last-child {
+    display: none;
 }
 .changebtn .activebtn div:first-child.active {
     display: none;
@@ -102,8 +149,13 @@ section {
     display: block;
 }
 
+
+
 .section-2 {
     margin: 0 60px 60px;
+}
+.orderRecord {
+    padding: 0% 5% 3%;
 }
 .orderRecord_tital {
     padding: 3% 0 0;
@@ -111,7 +163,24 @@ section {
     font-size: 30px;
     font-weight: bolder;
 }
-.orderRecord table {
-    margin: 0 auto;
-    width: 70%;
+.orderRecord-table {
+    width: 85%;
+    border: #22333B solid 1px;
+    margin: 3% auto;
+}
+th {
+    text-align: center;
+    background-color: #647687;
+    color: white;
+    font-size: larger;
+    padding: 1%;
+}
+td {
+    text-align: center;
+    padding: 2%;
+}
+.orderRecord-table tr{
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    font-size: large;
 }
