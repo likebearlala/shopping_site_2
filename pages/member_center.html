@@ -67,18 +67,18 @@
     <aside>
         <!--左側選單-->
         <div class="aside-member">
-            <a href="#">會員資料</a>
+            <a href="#memberdata">會員資料</a>
         </div>
         <div class="aside-record">
-            <a href="#">訂單紀錄</a>
+            <a href="#orderRecord">訂單紀錄</a>
         </div>
         <div class="aside-star">
-            <a href="#">評分紀錄</a>
+            <a href="#starRecord">評分紀錄</a>
         </div>
     </aside>
     <!--左側選單結束-->
 
-    <section>
+    <section id="memberdata">
         <div class="memberdata">
             <div class="memberdata_tital">
                 <!--會員資料標題-->
@@ -96,7 +96,8 @@
                 </div>
                 <div class="memberdata_content">
                     <!--FORM 會員資料顯示-->
-                    <form method="post" action="">
+                    <!--method="post"-->
+                    <form method="" action="">
                         <div class="md-inputone">
                             <!--左側-->
                             <input type="email" placeholder="電子郵件" value="" disabled><br>
@@ -134,7 +135,7 @@
         </div>
     </section>
 
-    <section class="section-2">
+    <section class="section-2" id="orderRecord">
         <div class="orderRecord">
             <div class="orderRecord_tital">
                 訂單紀錄
@@ -144,21 +145,21 @@
                 <form method="post" action="">
                     <table class="orderRecord-table">
                         <tr>
-                            <th>日期</th>
+                            <th class="th-date">日期時間</th>
                             <th>訂單編號</th>
                             <th>商品內容</th>
                             <th>訂單總額</th>
                             <th>訂單狀態</th>
                         </tr>
                         <tr>
-                            <td>2022/01/01</td>
+                            <td>2022-01-01 20:34:58</td>
                             <td>T000032</td>
                             <td>千拌麵∣辣豆瓣金盞花麵 (3包/袋)</td>
                             <td>NT$1161</td>
                             <td>已完成</td>
                         </tr>
                         <tr>
-                            <td>2022/05/20</td>
+                            <td>2022-05-20 22:12:40</td>
                             <td>T000058</td>
                             <td>曾粉 海味叻沙 Seafood Laksa</td>
                             <td>NT$1161</td>
@@ -167,7 +168,55 @@
                     </table>
                 </form>
             </div>
+        </div>
+    </section>
 
+    <section class="section-3" id="starRecord">
+        <div class="starRecord">
+            <div class="starRecord_tital">
+                評分紀錄
+                <hr>
+            </div>
+            <div class="starRecord_content">
+                <form method="post" action="">
+                    <table class="starRecord-table">
+                        <tr>
+                            <th>日期時間</th>
+                            <th class="th-product">商品品項</th>
+                            <th class="th-star">星級評分</th>
+                            <th>評論</th>
+                        </tr>
+                        <tr>
+                            <td>2022-01-01 14:32:33</td>
+                            <td>千拌麵∣辣豆瓣金盞花麵 (3包/袋)</td>
+                            <td>
+                                <div class="star">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                            </td>
+                            <td>辣豆瓣很香，麵條Q彈有嚼勁，非常好吃一定會回購!</td>
+                        </tr>
+                        <tr>
+                            <td>2022-01-05 10:24:45</td>
+                            <td>千拌麵∣辣豆瓣金盞花麵 (3包/袋)</td>
+                            <td>
+                                <div class="star">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                            </td>
+                            <td>辣豆瓣很香，麵條Q彈有嚼勁，非常好吃一定會回購!</td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
         </div>
     </section>
 

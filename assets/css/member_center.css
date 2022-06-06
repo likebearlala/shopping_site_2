@@ -184,3 +184,38 @@ td {
     border-bottom: 1px solid gray;
     font-size: large;
 }
+.th-date {
+    width: 14%;
+}
+
+.section-3 {
+    margin: 0 60px 60px;
+}
+.starRecord {
+    padding: 0% 5% 3%;
+}
+.starRecord_tital {
+    padding: 3% 0 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.starRecord-table {
+    width: 85%;
+    border: #22333B solid 1px;
+    margin: 3% auto;
+}
+.starRecord-table tr{
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    font-size: large;
+}
+.th-star {
+    width: 18%;
+}
+.th-product {
+    width: 35%;
+}
+.checked {
+    color: orange;
+}
