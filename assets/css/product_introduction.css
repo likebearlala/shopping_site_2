@@ -54,7 +54,7 @@ body{
   position: relative;
   width: 35%;
   max-height: auto;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   align-items: center;
   justify-content: center;
 }
@@ -62,7 +62,7 @@ body{
   max-width: 370px;
   height: auto;
   overflow: hidden;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 .text{  /*商品*/
   /* margin: 5px; */
