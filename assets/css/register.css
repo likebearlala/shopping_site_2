@@ -108,7 +108,6 @@ input {
 		overflow: hidden;
 		border: 5px solid #fafafa;
 		background-color: #fafafa;
-		/* margin-left: -100px; */
 		box-shadow: 0 0 .5rem #babbbc;
 		transform: rotate(-360deg);
 }

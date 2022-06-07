@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>購物車</title>
+    <title>有料|購物車</title>
     <link rel="stylesheet" href="../assets/css/all.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/shopping_cart.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
-<body onload="">
+<body>
     <header>
         <!--網頁最上方固定欄-->
         <!--LOGO有料-->
@@ -81,17 +82,21 @@
                     <td class="price">198</td>
                     <td>
                         <p>
-                            <div class="button"> <!--購買數量-->
+                            <div class="button">
+                                <!--購買數量-->
                                 <input type="button" class="button-num-add" value="-" onclick="minusNUM(0)">
-                                <input type="text" class="number" value="1" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">
+                                <input type="text" class="number" value="1"
+                                    onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">
                                 <input type="button" class="button-num-minus" value="+" onclick="addNUM(0)">
                             </div>
                         </p>
                     </td>
                     <td class="amount">594
-                        <em class="show_amount"></em> <!--cart_count.js 自動算出總價-->
-                    </td> <!--總價-->
-                    <td><input type="button"  class="delete" value="刪除" onclick="deleteTR(this)"></td>
+                        <em class="show_amount"></em>
+                        <!--cart_count.js 自動算出總價-->
+                    </td>
+                    <!--總價-->
+                    <td><input type="button" class="delete" value="刪除" onclick="deleteTR(this)"></td>
                 </tr>
 
                 <tr class="shop_cart-tr">
@@ -99,30 +104,35 @@
                     <td class="price">189</td>
                     <td>
                         <p>
-                            <div class="button"> <!--購買數量-->
-                                <input type="button" class="button-num-add" value="-" onclick="minusNUM(1)"> <!--onclick裡面的數字為商品品項數量(從0開始算)-->
-                                <input type="text" class="number" value="1" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">
+                            <div class="button">
+                                <!--購買數量-->
+                                <input type="button" class="button-num-add" value="-" onclick="minusNUM(1)">
+                                <!--onclick裡面的數字為商品品項數量(從0開始算)-->
+                                <input type="text" class="number" value="1"
+                                    onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">
                                 <input type="button" class="button-num-minus" value="+" onclick="addNUM(1)">
                             </div>
                         </p>
                     </td>
-                    <td class="amount">567</td><!--總價-->
-                    <td><input type="button" value="刪除" class="delete"></td> <!--刪除商品-->
+                    <td class="amount">567</td>
+                    <!--總價-->
+                    <td><input type="button" value="刪除" class="delete"></td>
+                    <!--刪除商品-->
                 </tr>
 
                 <tr class="shop_cart-tr">
                     <td colspan="4" style="text-align: right; padding-right:1em;">
                         商品總額:
                     </td>
-                    <td class="total" >1161</td>
+                    <td class="total">1161</td>
                 </tr>
 
-            <!-- 下一步按鈕 -->
+                <!-- 下一步按鈕 -->
 
                 <tr>
-                    <td colspan="5">           
+                    <td colspan="5">
                         <div class="NEXT">
-                            <input type="submit" value="前往結帳" class="buttonLOOK" onclick=""/>
+                            <input type="submit" value="前往結帳" class="buttonLOOK" onclick="" />
                         </div>
                     </td>
                 </tr>
@@ -133,11 +143,14 @@
 
         </form>
     </section>
-
+    <footer>
+        Copyright © since 2022 有料 All Rights Reserved.
+    </footer>
 
 <script src="../assets/js/button_add_minus.js"></script>
 <script src="../assets/js/cart_delete.js"></script>
 <script src="../assets/js/cart_count.js"></script>
+
 </body>
 
 </html>

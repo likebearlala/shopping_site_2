@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>結帳頁面</title>
+    <title>有料|結帳頁面</title>
     <link rel="stylesheet" href="../assets/css/all.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -88,15 +88,27 @@
                     <input type="text" name="address" placeholder="地址" maxlength="30" size="32" />
                 </div><br>
                 <div class="NEXT" id="next">
-                        <input type="submit" value="前往結帳" class="buttonLOOK" onclick="" />
+                    <input type="button" onclick="check()" value="回到上一頁" class="buttonLOOK" id="back" />
+                    <input type="submit" value="前往結帳" class="buttonLOOK" onclick="" id="goto" />
                 </div>
 
             </form>
+
         </section>
 
     </div>
+    <footer>
+        Copyright © since 2022 有料 All Rights Reserved.
+    </footer>
 
+    <script>
+        function check() {
 
+            window.location.href = "shopping_cart.html";
+            window.event.returnValue = false;
+
+        }
+    </script>
 
 </body>
 
