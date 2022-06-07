@@ -60,7 +60,12 @@ th{
   }
 
 
-/* .delete :hover {
-    cursor: pointer;
-    color: red;
-} */
+.delete  {
+    /* background-color: #22333B;
+    border-radius: .5em; */
+    /* color: white; */
+    padding: .2em;
+}
+.delete :hover {
+    border: 1px solid black;
+}

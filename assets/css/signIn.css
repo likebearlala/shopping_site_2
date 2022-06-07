@@ -1,148 +1,47 @@
 
 .register{
-    font-size: 0.7em;
+    font-size: 1em;
 }
-
-/* .button {
-    border-radius: 5px;
-    padding: 0;
-} */
 
 section {
     margin: 0%;
-    /* padding-top: 150px; */
     padding-top: 7%;
 
 }
 
 .sign_in{
     margin: 4% auto;
-    /* padding: 20px 20px 40px; */
     padding: 6em;
     display: block;
     width: 25%;
     text-align: center;
-    /* color:white; */
-    /* background-color: white; */
     border-radius: 25px;
     border: 2px solid #D79B00;
-    /* opacity: 0.8; */
-    /* background-image: url('/assets/images/products/signin_background.jpeg'); */
     background-color: rgba(255, 250, 250, 0.8);
     border-spacing: 10px;
     box-shadow: 6px 4px 2px #444;
+    line-height: 3em;
 }
-/* 
-button{
-    margin: 20px;
-}
-.button {
-        width: 130px;
-        height: 40px;
-        color: #fff;
-        border-radius: 5px;
-        padding: 10px 25px;
-        font-family: 'Lato', sans-serif;
-        font-weight: 500;
-        background: transparent;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        position: relative;
-        display: inline-block;
-         box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-         7px 7px 20px 0px rgba(0,0,0,.1),
-         4px 4px 5px 0px rgba(0,0,0,.1);
-        outline: none;
+.buttonLOOK{
+  border:0;
+  background-color:#22333B;
+  color:#fff;
+  border-radius:10px;
+  cursor:pointer;
+  width:100px;
+  height:50px;
+  margin:.5em;
 }
 
-.button click {
-    background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
-    line-height: 42px;
-    padding: 0;
-    border: none;
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
+input.buttonLOOK:hover {
+  color:#D79B00;
+  background-color:#fff;
+  border:2px #D79B00;
 }
 
-.button:before,
-.button:after {
-  position: absolute;
-  content: "";
-  right: 0;
-  bottom: 0;
-  background: rgba(251,75,2,1);
-  box-shadow:
-   -7px -7px 20px 0px rgba(255,255,255,.9),
-   -4px -4px 5px 0px rgba(255,255,255,.9),
-   7px 7px 20px 0px rgba(0,0,0,.2),
-   4px 4px 5px 0px rgba(0,0,0,.3);
-  transition: all 0.3s ease;
+#user_email{
+  padding: .3em;
 }
-.button:before{
-   height: 0%;
-   width: 2px;
+#user_password{
+  padding: .3em;
 }
-.button:after {
-  width: 0%;
-  height: 2px;
-}
-.button:hover{
-  color: rgba(251,75,2,1);
-  background: transparent;
-}
-.button:hover:before {
-  height: 100%;
-}
-.button:hover:after {
-  width: 100%;
-}
-.button click:before,
-.button click:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  background: rgba(251,75,2,1);
-  box-shadow:
-   -7px -7px 20px 0px rgba(255,255,255,.9),
-   -4px -4px 5px 0px rgba(255,255,255,.9),
-   7px 7px 20px 0px rgba(0,0,0,.2),
-   4px 4px 5px 0px rgba(0,0,0,.3);
-  transition: all 0.3s ease;
-}
-.button click:before {
-  width: 2px;
-  height: 0%;
-}
-.button click:after {
-  height: 2px;
-  width: 0%;
-}
-.button click:hover:before {
-  height: 100%;
-}
-.button click:hover:after {
-  width: 100%;
-} */
-
-/*body {
-    background-repeat: no-repeat;
-    background-image: url("../images/others/signin_background.jpeg");
-    
-}*/
-
-/* .signin-background-image{
-    padding-top: 150px;
-    background-repeat: no-repeat;
-    background-image: url("../images/others/signin_background.jpeg");
-    opacity: 0.6;
-    width: 100%;
-    background-position: center top;
-    border: 1px solid black;
-    background-attachment: scroll;
-    background: no-repeat center / contain;
-    background-image: -webkit-cross-fade(url(1.jpg), url(2.jpg), 50%);
-    background-image: cross-fade(url(1.jpg), url(2.jpg), 50%);
-} */

@@ -1,12 +1,10 @@
 section{
     margin: 0;
-    padding-top: 6%;
+    padding-top: 5%;
 }
 
 .register_flex{
     display: flex;
-    /* padding: 150px; */
-
 }
 
 .member_register{
@@ -26,6 +24,7 @@ section{
 }
 .member_register-th{
     text-align: center;
+    padding: .3em;
 }
 .member_register-userphoto {
     border: 0.1em solid #444;
@@ -47,3 +46,73 @@ section{
 .button{
     margin: 5px;
 }
+input {
+    padding: .3em;
+}
+.buttonLOOK{
+    border:0;
+    background-color:#22333B;
+    color:#fff;
+    border-radius:10px;
+    cursor:pointer;
+    width:100px;
+    height:50px;
+    margin:1em;
+  }
+  
+  input.buttonLOOK:hover {
+    color:#D79B00;
+    background-color:#fff;
+    border:2px #D79B00;
+  }
+
+
+
+@media(max-width:480px) {
+    .member_register {
+        width: 60%;
+        padding: 45%;
+        padding-top: 3px;
+        margin: 10%;
+        margin-top: 150px;
+    }
+
+}
+@media(max-width:850px) {
+    .member_register {
+        width: 60%;
+        padding: 5%;
+        padding-top: 3px;
+        margin: 10%;
+        margin-top: 150px;
+    }
+}
+@media(max-width:1200px) {
+    .member_register {
+        width: 60%;
+        padding: 25%;
+        padding-top: 3px;
+        margin: 5%;
+        margin-top: 150px;
+
+    }
+    section{
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+.member_register-userphoto {
+		overflow: hidden;
+		border: 5px solid #fafafa;
+		background-color: #fafafa;
+		/* margin-left: -100px; */
+		box-shadow: 0 0 .5rem #babbbc;
+		transform: rotate(-360deg);
+}
+.member_register-userphoto img{
+    width: 100%;
+}
+
