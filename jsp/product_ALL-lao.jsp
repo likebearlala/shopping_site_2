@@ -9,7 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>有料|全部的麵</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/all.css">
     <link rel="stylesheet" href="../assets/css/products_ALL.css">
 </head>
@@ -71,7 +72,7 @@
             <a href="product_ALL-guochen.jsp">曾拌麵</a>
         </div>
         <div class="aside-Qian">
-            <a href="product_ALL-qianqian.jsp">千拌麵</a>
+            <a href="../jsp/product_ALL-qianqian.jsp">千拌麵</a>
         </div>
         <div class="aside-Chia">
             <a href="product_ALL-jia.jsp">賈以食日</a>
@@ -89,31 +90,41 @@
 		if(con.isClosed())
             out.println("連線建立失敗");
         else{	
-            sql = "SELECT count(*) FROM product;" ;
+            sql = "SELECT count(*) FROM product WHERE `BID` = 4;" ;
             ResultSet tmp = con.createStatement().executeQuery(sql);
 			tmp.next();
 %>
         <div class="section_Tital">
-            <h2>全部的麵 </h2><h3><%out.println(tmp.getString("count(*)"));%></h3>
+            <h2>老媽拌麵 </h2>
+            <h3><%out.println(tmp.getString("count(*)"));%></h3>
         </div>
-		
-		<!--tempalte start-->
+
+        <!--tempalte start-->
 
 <%
-			sql = "SELECT * FROM product;" ;
+			sql = "SELECT * FROM product WHERE `BID` = 4;" ;
 			tmp = con.createStatement().executeQuery(sql);
-			for(int i=0;i<7;i++){
-				out.println("<div class='Row'>");
-				for(int j=1;j<4;j++){
-					tmp.next();
-					out.println("<div class='products'><a href='product_introduction.jsp?name="+tmp.getString("PID")+"'>");
-					out.println("<img src='"+tmp.getString("PImg")+"'>");
-					out.println("<p>"+tmp.getString("PName")+"</p>");
-					out.println("<p>NT$"+tmp.getString("PPrice")+"</p>");
-					out.println("</a></div>");
-				}
-				out.println("</div>");
+			out.println("<div class='Row'>");
+			for(int j=1;j<4;j++){
+				tmp.next();
+				out.println("<div class='products'><a href='product_introduction.jsp?name="+tmp.getString("PID")+"'>");
+				out.println("<img src='"+tmp.getString("PImg")+"'>");
+				out.println("<p>"+tmp.getString("PName")+"</p>");
+				out.println("<p>NT$"+tmp.getString("PPrice")+"</p>");
+				out.println("</a></div>");
 			}
+			out.println("</div>");
+			out.println("<div class='Row'>");
+			for(int j=1;j<3;j++){
+				tmp.next();
+				out.println("<div class='products'><a href='product_introduction.jsp?name="+tmp.getString("PID")+"'>");
+				out.println("<img src='"+tmp.getString("PImg")+"'>");
+				out.println("<p>"+tmp.getString("PName")+"</p>");
+				out.println("<p>NT$"+tmp.getString("PPrice")+"</p>");
+				out.println("</a></div>");
+			}
+			out.println("<div class='products'></div></div>");
+			
 			con.close();//關閉連線 
 	    }
     }
@@ -121,8 +132,10 @@
            out.println("SQL錯誤"+sExec.toString());
     }
 %>
-		<!--trmplate end-->
-		
+        <div class="products"></div>
+        </div>
+        <!--trmplate end-->
+
     </section>
     <!--商品陳列結束-->
 
@@ -130,7 +143,9 @@
         您是第<%@include file="../assets/jsp/count.jsp"%>個顧客<br>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
