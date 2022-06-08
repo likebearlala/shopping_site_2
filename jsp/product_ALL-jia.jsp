@@ -89,20 +89,20 @@
 		if(con.isClosed())
             out.println("連線建立失敗");
         else{	
-            sql = "SELECT count(*) FROM product;" ;
+            sql = "SELECT count(*) FROM product WHERE `BID` = 3;" ;
             ResultSet tmp = con.createStatement().executeQuery(sql);
 			tmp.next();
 %>
         <div class="section_Tital">
-            <h2>全部的麵 </h2><h3><%out.println(tmp.getString("count(*)"));%></h3>
+            <h2>賈以食日 </h2><h3><%out.println(tmp.getString("count(*)"));%></h3>
         </div>
 		
 		<!--tempalte start-->
 
 <%
-			sql = "SELECT * FROM product;" ;
+			sql = "SELECT * FROM product WHERE `BID` = 3;" ;
 			tmp = con.createStatement().executeQuery(sql);
-			for(int i=0;i<7;i++){
+			for(int i=0;i<2;i++){
 				out.println("<div class='Row'>");
 				for(int j=1;j<4;j++){
 					tmp.next();

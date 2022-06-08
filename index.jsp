@@ -17,14 +17,14 @@
         <!--網頁最上方固定欄-->
         <!--LOGO有料-->
         <div class="t-logo">
-            <a href="index.html">
+            <a href="index.jsp">
                 <img src="assets/images/icon/logo.png" width="100px" alt="有料">
             </a>
         </div>
         <!--頁面選單-->
         <nav>
             <div class="t-showProducts">
-                <a href="pages/products_ALL.html">有料的麵</a>
+                <a href="jsp/products_ALL.jsp">有料的麵</a>
             </div>
             <div class="t-MemberCenter">
                 <a href="pages/member_center.html">會員中心</a>
@@ -129,33 +129,7 @@
     
 
     <footer>
-	您是第
-<%
-    try {
-        if(con.isClosed())
-			out.println("連線建立失敗");
-        else {
-			sql="SELECT * FROM `counter`";
-            ResultSet rs=con.createStatement().executeQuery(sql); 
-            if (rs.next()){
-                String countString = rs.getString(1);
-	            int count = Integer.parseInt(countString);
-                if(session.isNew()==true){
-	                count++; //計數器加1
-	                countString = String.valueOf(count); //寫回資料庫
-	                sql="UPDATE `counter` SET `count` = " + countString ;
-	                con.createStatement().execute(sql);
-                }
-                out.println(count);
-                con.close();//關閉連線 
-                }
-       }
-    }
-    catch (SQLException sExec) {
-           out.println("SQL錯誤"+sExec.toString());
-    }
-%>
-		個顧客<br>
+	您是第<%@include file="../assets/jsp/count.jsp"%>個顧客<br>
         Copyright © since 2022 有料 All Rights Reserved.
     </footer>
 
