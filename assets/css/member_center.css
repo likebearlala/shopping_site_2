@@ -30,12 +30,11 @@ section {
     padding: 0% 5%;
 }
 .memberdata_tital {
-    display: flex;
     padding: 3% 0 0;
     text-align: center;
     font-size: 30px;
     font-weight: bolder;
-    justify-content: right;
+    
 }
 .memberdata_all {
     display: flex;
@@ -43,7 +42,7 @@ section {
 }
 
 .memberout {
-    padding: 4%;
+    padding: 6.5% 4% 1%;
 }
 .memberout img {
     border-radius: 10px;
@@ -66,13 +65,15 @@ section {
 }
 
 .memberdata_content {
-    padding: 2.5% 0;
+    padding: 0 0 2.5%;
 }
 .memberdata_content form{
-    display: flex;
-    flex-wrap: wrap;
     width: 800px;
     justify-content: space-around;
+}
+.inputdata {
+    display: flex;
+    justify-content: left;
 }
 
 .md-inputtwo p {
@@ -97,9 +98,9 @@ section {
     width: 320px;
 }
 .md-form_button {
-    margin: 40px 100px 0 0;
+    margin: 2% 20%;
     display: flex;
-    width: 70%;
+    width: 50%;
     justify-content: space-around;
 }
 .reset_data {
@@ -114,10 +115,12 @@ section {
 }
 
 .changebtn {
-    margin: 0 5% 0 27%;
+    display: flex;
+    justify-content: right;
+    margin-bottom: 1%;
 }
 .changebtn img {
-    margin-right: 10px;
+    margin: 10px;
 }
 .activebtn {
     margin: 0;
