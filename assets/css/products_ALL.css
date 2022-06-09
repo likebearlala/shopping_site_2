@@ -19,7 +19,7 @@ aside div a {
 }
 
 section {
-    margin: 120px 60px auto;
+    margin: 120px 60px;
     border: #c9c2bbde solid;
     border-radius: 1%;
     float: right;
@@ -38,7 +38,8 @@ section {
 }
 .Row {
     display: flex;
-    margin: 0 0 2%;
+    margin: 0;
+    justify-content: left;
 }
 .Row img {
     margin: 0;
@@ -49,7 +50,7 @@ section {
     margin: 2%;
     margin-left: 2%;
     margin-bottom: 2%;
-    width: 50%;
+    max-width: 340px;
 }
 .products p {
     text-align: center;
@@ -69,7 +70,7 @@ section {
 }*/
 
 .products img{
-    max-width: 370px;
+    max-width: 330px;
     height: 70%;
     overflow: hidden;
     margin: 15px auto;
