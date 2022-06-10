@@ -28,19 +28,19 @@
                 <a href="member_center.html">會員中心</a>
             </div>
             <div class="t-aboutUS">
-                <a href="#">關於有料</a>
+                <a href="about_us.html">關於有料</a>
             </div>
         </nav>
         <!--會員及購物車圖標-->
         <div class="t-icon">
             <div class="t-i-user">
-                <a href="#">
+                <a href="sign_in.html">
                     <!--前往會員登入註冊頁-->
                     <img src="../assets/images/icon/user.png" width="40px" alt="會員">
                 </a>
             </div>
             <div class="t-i-cart">
-                <a href="#">
+                <a href="shopping_cart.html">
                     <!--前往購物車頁-->
                     <img src="../assets/images/icon/shopping-cart.png" width="40px" alt="購物車">
                 </a>
@@ -57,7 +57,7 @@
         </div>
     </header>
     <!--網頁最上方固定欄結束-->
-
+<main>
     <section>
         <div class="register_flex">
             <div class="member_register">
@@ -98,6 +98,19 @@
                             <td class="member_register-td"><input type="password" name="check_password"
                                     id="check_password" onblur="check()" required placeholder="再輸入一次密碼" /></td>
                         </tr>
+                        <tr>
+                            <td>手機:</td>
+                            <!--手機-->
+                            <td class="member_register-td"><input type="text" name="user_phone"
+                                    required placeholder="手機" maxlength="10" size="13"/></td>
+                        </tr>
+                        <tr>
+                            <td>地址:</td>
+                            <!--地址-->
+                            <td class="member_register-td"><input type="text" name="user_address"
+                                 placeholder="地址" maxlength="30" size="32" required />
+                            </td>
+                        </tr>
 
                         <tr>
                             <td colspan="2" class="register_button">
@@ -111,7 +124,7 @@
             </div>
         </div>
     </section>
-    
+</main>
     <script src="../assets/js/check_password.js"></script>
     <!--檢查密碼值是否一致-->
 </body>
