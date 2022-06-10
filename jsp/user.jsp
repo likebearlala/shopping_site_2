@@ -11,7 +11,8 @@ if(session.getAttribute("user_email") != null ){
 	    user_email=rs.getString("user_email");
 		user_password=rs.getString("user_password");
 	}
-    con.close();//結束資料庫連結
+
+   
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,6 +86,9 @@ if(session.getAttribute("user_email") != null ){
         <div class="aside-record">
             <a href="#">訂單紀錄</a>
         </div>
+        <div class="aside-record">
+            <a href="logout.jsp">登出</a>
+        </div>
     </aside>
     <!--左側選單結束-->
 
@@ -108,7 +112,7 @@ if(session.getAttribute("user_email") != null ){
                             <input type="password" placeholder="密碼" name="user_password" value=""><br>
                             <input type="password" placeholder="確認密碼" name="checkpwd" value="">
                             <button type="submit" class="reset_data">
-                                <img src="../assets/images/others/pencil.png" width="35px">
+                                <img src="assets/images/others/pencil.png" width="35px">
                                 <h5>確認更改</h5>
                             </button>
                         </form>

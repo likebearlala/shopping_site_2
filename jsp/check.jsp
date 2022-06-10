@@ -1,18 +1,29 @@
 <%@page contentType="text/html;charset=UTF-8" language="java" import="java.sql.*"%>
 <%@include file="config.jsp" %>
 <%
-if(request.getParameter("user_email") !=null && !request.getParameter("user_email").equals("") 
-	&& request.getParameter("user_password") != null && !request.getParameter("user_password").equals("")){
 
-    sql = "SELECT * FROM `noodlemembers` WHERE `user_email`='" +request.getParameter("user_email") + 
-	      "'  AND `user_password`='" + request.getParameter("user_password") + "'"  ; 
+String email = request.getParameter("user_email");
+String pwd = request.getParameter("user_password");
+
+if(email !=null && !email.equals("") 
+	&& pwd != null && !pwd.equals("")){
+
+    sql = "SELECT * FROM `noodlemembers` WHERE `user_email`='" + email + 
+	      "'  AND `user_password`='" + pwd + "'"  ; 
 	
     ResultSet rs =con.createStatement().executeQuery(sql);
     
-    if(rs.next()){            
-        session.setAttribute("user_email",request.getParameter("user_email"));
-		con.close();//結束資料庫連結
-        response.sendRedirect("user.jsp") ;
+    if(rs.next()){  
+        if(email.equals("1@admin")){
+            session.setAttribute("admin",email);
+		    con.close();//結束資料庫連結
+            response.sendRedirect("manage.jsp") ;
+        }   
+        else{
+            session.setAttribute("user_email",email);
+		    con.close();//結束資料庫連結
+            response.sendRedirect("user.jsp") ;
+        }       
     }
     else{
 		con.close();//結束資料庫連結
