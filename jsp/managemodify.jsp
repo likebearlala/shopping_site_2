@@ -116,8 +116,7 @@ if(session.getAttribute("admin") != null ){
                         <form action="moddo.jsp" method="post" name="modForm">
                             <div>
                                 <tr>
-                                    <label>產品編號：</label>
-                                    <input type="hidden" name="pid" id="pid" value="<%=pid%>">>
+                                    <input type="hidden" name="pid" id="pid" value="<%=pid%>">
                                 </tr>
                             </div>
                             <div>
