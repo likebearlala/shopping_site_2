@@ -51,6 +51,7 @@ section {
     margin-left: 2%;
     margin-bottom: 2%;
     max-width: 340px;
+    display: inline-block;
 }
 .products p {
     text-align: center;
