@@ -100,12 +100,6 @@
                         <form action="manageadddo.jsp" method="post" name="addForm">
                             <div>
                                 <tr>
-                                    <label>產品編號：</label>
-                                    <input type="text" name="pid" id="pid" placeholder="請輸入產編">
-                                </tr>
-                            </div>
-                            <div>
-                                <tr>
                                     <label>產品名稱：</label>
                                     <input type="text" name="pname" id="pname" placeholder="請輸入產品名稱">
                                 </tr>

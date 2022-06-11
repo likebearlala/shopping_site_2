@@ -1,8 +1,6 @@
 <%@page contentType="text/html;charset=UTF-8" language="java" import="java.sql.*"%>
 <%@include file="config.jsp" %>
 <%
-
-String pid = request.getParameter("pid");
 String pname = request.getParameter("pname");
 String bid = request.getParameter("bid");
 String price = request.getParameter("price");
@@ -11,14 +9,14 @@ String pcontent = request.getParameter("pcontent");
 String img = request.getParameter("img");
 
 if(session.getAttribute("admin") != null){
-    if(request.getParameter("pid")!=null){
-		sql = "INSERT `product`(`PID`,`PName`,`BID`,`PPrice`,`PQuantuty`,`PFeature`,`PImg`)"+"VALUES('"+pid+"','"+pname+"','"+bid+"','"+price+"','"+total+"','"+pcontent+"', '"+img+"')";	
+   
+		sql = "INSERT `product`(`PName`,`BID`,`PPrice`,`PQuantuty`,`PFeature`,`PImg`)"+"VALUES('"+pname+"','"+bid+"','"+price+"','"+total+"','"+pcontent+"', '"+img+"')";	
 		int no=con.createStatement().executeUpdate(sql); 
     	if (no>0){
 		con.close();//結束資料庫連結
 		out.print("<script>alert('新增成功！'); window.location='manageadd.jsp' </script>");
 
-    	}
+    	
 	
 	}
 	else{

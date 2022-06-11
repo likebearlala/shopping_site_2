@@ -117,7 +117,7 @@ if(session.getAttribute("admin") != null ){
                             <div>
                                 <tr>
                                     <label>產品編號：</label>
-                                    <input type="text" name="pid" id="pid" value="<%=pid%>" disabled>
+                                    <input type="hidden" name="pid" id="pid" value="<%=pid%>">>
                                 </tr>
                             </div>
                             <div>

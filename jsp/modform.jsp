@@ -82,6 +82,9 @@ if(session.getAttribute("admin") != null ){
         <div class="aside-record">
             <a href="managedelete.jsp">刪除商品</a>
         </div>
+        <div class="aside-record">
+            <a href="logoutadmin.jsp">登出</a>
+        </div>
     </aside>
     <!--左側選單結束-->
 

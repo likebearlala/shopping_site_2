@@ -3,14 +3,12 @@
 <%
 
 if(session.getAttribute("user_email") != null ){
-	if(request.getParameter("user_email")!=null){
-		sql = "UPDATE `Client` SET `CName`='"+request.getParameter("username")+"', `CPhone`='"+request.getParameter("user_phone")+"', `CAddress`='"+request.getParameter("user_address")+"', `CAccount`='"+request.getParameter("user_email")+"', `CPassword`='"+request.getParameter("user_password")+"' WHERE `CAccount`='"+session.getAttribute("user_email")+"'";	
+	if(request.getParameter("user_password")!=null){
+		sql = "UPDATE `Client` SET `CPassword`='"+request.getParameter("user_password")+"' WHERE `CAccount`='"+session.getAttribute("user_email")+"'";	
 		int no=con.createStatement().executeUpdate(sql); 
     	if (no>0){
 		con.close();//結束資料庫連結
 		out.print("<script>alert('更新成功！'); window.location='user.jsp' </script>");
-		
-	
     	}
 	
 	}
