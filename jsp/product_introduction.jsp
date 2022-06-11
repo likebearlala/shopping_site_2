@@ -1,6 +1,14 @@
 <%@ page import = "java.sql.*"%>
 <%@ page language="java" contentType="text/html" pageEncoding="UTF-8"%>
-<%@include file="../assets/jsp/config.jsp"%>
+<%@include file="config.jsp"%>
+<%!
+	String enter(String str){
+		int index = 0;
+		while((index=str.indexOf("\n")) != -1)
+			str = str.substring(0,index) + "<br>" + str.substring(index+1);
+		return(str);
+	}
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -83,24 +91,23 @@
                 <img src="<%out.println(tmp.getString("PImg"));%>" >
             </div>
             <div class="text">
-                <form method="post" action="">
-                        <h2><%out.println(tmp.getString("PName"));%></h2> <!--商品名字-->
-                        <h2 class="price">NT$<%out.println(tmp.getString("PPrice"));%></h2> <!--商品價格-->
-
+                <form method="post" action="addcart.jsp">
+                        <h2 name="PName"><%out.println(tmp.getString("PName"));%></h2> <!--商品名字-->
+                        <h2 class="price" name="PPrice">NT$<%out.println(tmp.getString("PPrice"));%></h2> <!--商品價格-->
                     <p>
                         <div class="button">數量： <!--購買數量-->
                             <input type="button" class="button-num" value="-" onclick="minusNUM(0)">
-                            <input type="text" class="number" value="1">
+                            <input type="text" class="number" value="1" name="CartQ">
                             <input type="button" class="button-num" value="+" onclick="addNUM(0)"> 
                             <font class="inventory">庫存:<%out.println(tmp.getString("PQuantuty"));%></font>  <!--商品剩餘庫存-->
                             <input type="submit" class="buttonLOOK" value="加到購物車"  onclick="">
+							<input type="hidden" name="PID" value='<%out.println(tmp.getString("PID"));%>'>
                         </div>
                     </p>
                 </form>
             </div>
         </div>
 </section>
-
 
  <!--商品介紹-->
 
@@ -113,11 +120,17 @@
             
                 <div class="introduction">
                     <ul>
-                        <li><%out.println(tmp.getString("PFeature"));%></li>
+                        <li><%out.println(enter(tmp.getString("PFeature")));%></li>
                     </ul>
                 </div>
     </section>
-
+<%con.close();//關閉連線 
+               
+       }
+    }
+    catch (SQLException sExec) {
+           out.println("SQL錯誤"+sExec.toString());
+    }%>
 
 <!-- 留言板 -->
 <br>
@@ -174,29 +187,8 @@
     </section>
 
     <footer >
-        您是第
-<%
-			sql="SELECT * FROM `counter`";
-            ResultSet rs=con.createStatement().executeQuery(sql); 
-            if (rs.next()){
-                String countString = rs.getString(1);
-	            int count = Integer.parseInt(countString);
-                if(session.isNew()==true){
-	                count++; //計數器加1
-	                countString = String.valueOf(count); //寫回資料庫
-	                sql="UPDATE `counter` SET `count` = " + countString ;
-	                con.createStatement().execute(sql);
-                }
-                out.println(count);
-                con.close();//關閉連線 
-                }
-       }
-    }
-    catch (SQLException sExec) {
-           out.println("SQL錯誤"+sExec.toString());
-    }
-%>
-		個顧客<br>
+		您是第<%@include file="count.jsp"%>個顧客<br>
+		Copyright © since 2022 有料 All Rights Reserved.
     </footer>
 <script>
 

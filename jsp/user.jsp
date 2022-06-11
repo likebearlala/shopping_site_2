@@ -39,14 +39,14 @@ if(session.getAttribute("user_email") != null ){
         <!--網頁最上方固定欄-->
         <!--LOGO有料-->
         <div class="t-logo">
-            <a href="../index.html">
+            <a href="../index.jsp">
                 <img src="../assets/images/icon/logo.png" width="100px" alt="有料">
             </a>
         </div>
         <!--頁面選單-->
         <nav>
             <div class="t-showProducts">
-                <a href="products_ALL-.html">有料的麵</a>
+                <a href="products_ALL.jsp">有料的麵</a>
             </div>
             <div class="t-MemberCenter">
                 <a href="member_center.html">會員中心</a>
@@ -58,7 +58,7 @@ if(session.getAttribute("user_email") != null ){
         <!--會員及購物車圖標-->
         <div class="t-icon">
             <div class="t-i-user">
-                <a href="sign_in.html">
+                <a href="user.jsp">
                     <!--前往會員登入註冊頁-->
                     <img src="../assets/images/icon/user.png" width="40px" alt="會員">
                 </a>
@@ -242,7 +242,7 @@ if(session.getAttribute("user_email") != null ){
     </section>
     </main>
     <footer>
-        123456
+		Copyright © since 2022 有料 All Rights Reserved.
     </footer>
 
     <script src="../assets/js/check_password.js"></script>

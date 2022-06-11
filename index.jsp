@@ -1,6 +1,6 @@
 <%@ page import = "java.sql.*"%>
 <%@ page language="java" contentType="text/html" pageEncoding="UTF-8"%>
-<%@include file="../assets/jsp/config.jsp"%>
+<%@include file="jsp/config.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,7 +129,7 @@
     
 
     <footer>
-	您是第<%@include file="../assets/jsp/count.jsp"%>個顧客<br>
+		您是第<%@include file="jsp/count.jsp"%>個顧客<br>
         Copyright © since 2022 有料 All Rights Reserved.
     </footer>
 

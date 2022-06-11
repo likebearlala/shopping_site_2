@@ -1,6 +1,6 @@
 <%@ page import = "java.sql.*"%>
 <%@ page language="java" contentType="text/html" pageEncoding="UTF-8"%>
-<%@include file="../assets/jsp/config.jsp"%>
+<%@include file="config.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +38,7 @@
         <!--會員及購物車圖標-->
         <div class="t-icon">
             <div class="t-i-user">
-                <a href="sign_in.html">
+                <a href="../pages/sign_in.html">
                     <!--前往會員登入註冊頁-->
                     <img src="../assets/images/icon/user.png" width="40px" alt="會員">
                 </a>
@@ -127,7 +127,7 @@
     <!--商品陳列結束-->
 
     <footer>
-        您是第<%@include file="../assets/jsp/count.jsp"%>個顧客<br>
+        您是第<%@include file="count.jsp"%>個顧客<br>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
