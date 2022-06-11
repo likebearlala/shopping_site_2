@@ -3,7 +3,7 @@ CREATE DATABASE `final` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE `final`;
 
 CREATE TABLE `Client` (
-  `ClientID` VARCHAR(4) NOT NULL,
+  `ClientID` INT NOT NULL UNIQUE AUTO_INCREMENT,
   `CName` VARCHAR(20) NOT NULL,
   `CPhone` VARCHAR(10) NOT NULL,
   `CAddress` VARCHAR(30) NOT NULL,
@@ -11,19 +11,18 @@ CREATE TABLE `Client` (
   `CPassword` VARCHAR(30) NOT NULL,
   PRIMARY KEY (`ClientID`)
 );
-INSERT INTO `Client` VALUES ('C001','曾順莉','0900000000','桃園市中壢區中北路33號','10944133@gmail.com','10944133');
-INSERT INTO `Client` VALUES ('C002','楊芷昀','0900000001','桃園市中壢區中北路35號','10944135@gmail.com','10944135');
-INSERT INTO `Client` VALUES ('C003','羅渽民','0900000002','桃園市中壢區中北路2號','nctdream@gmail.com','nctdream');
-INSERT INTO `Client` VALUES ('C004','金太妍','0900000003','桃園市中壢區中北路39號','taeteon0309@gmail.com','0309');
-INSERT INTO `Client` VALUES ('C005','金曉珍','0900000004','桃園市中壢區中北路422號','onf0422@gmail.com','onf0422');
+INSERT INTO `Client` VALUES (1,'曾順莉','0900000000','桃園市中壢區中北路33號','10944133@gmail.com','10944133');
+INSERT INTO `Client` VALUES (2,'楊芷昀','0900000001','桃園市中壢區中北路35號','10944135@gmail.com','10944135');
+INSERT INTO `Client` VALUES (3,'羅渽民','0900000002','桃園市中壢區中北路2號','nctdream@gmail.com','nctdream');
+INSERT INTO `Client` VALUES (4,'金太妍','0900000003','桃園市中壢區中北路39號','taeteon0309@gmail.com','0309');
+INSERT INTO `Client` VALUES (5,'金曉珍','0900000004','桃園市中壢區中北路422號','onf0422@gmail.com','onf0422');
 
 CREATE TABLE `Order` (
   `OrderID` VARCHAR(4) NOT NULL,
   `ClientID` VARCHAR(4) NOT NULL,
   `ODate` DATE,
   `OFare` INT,
-  PRIMARY KEY (`OrderID`),
-  FOREIGN KEY(`ClientID`) REFERENCES `Client`(`ClientID`)
+  PRIMARY KEY (`OrderID`)
 );
 INSERT INTO `Order` VALUES ('O001','C004','2022/08/15',39);
 INSERT INTO `Order` VALUES ('O002','C002','2022/08/20',60);
@@ -48,9 +47,7 @@ CREATE TABLE `Order_Detail` (
   `ProductID` VARCHAR(4) NOT NULL,
   `Total` INT,
   `BID` INT NOT NULL,
-  PRIMARY KEY (`OrderID`),
-  FOREIGN KEY(`OrderID`) REFERENCES `Order`(`OrderID`),
-  FOREIGN KEY(`BID`) REFERENCES `Brand`(`BID`)
+  PRIMARY KEY (`OrderID`)
 );
 INSERT INTO `Order_Detail` VALUES ('O001','P000',396,1);
 INSERT INTO `Order_Detail` VALUES ('O002','P004',990,2);
@@ -67,8 +64,7 @@ CREATE TABLE `product` (
     `PQuantuty` INT,
     `PFeature` TEXT,
     `PImg` VARCHAR(45),
-    PRIMARY KEY (`pID`),
-    FOREIGN KEY(`BID`) REFERENCES `Brand`(`BID`)
+    PRIMARY KEY (`pID`)
 );
 INSERT INTO `Product` VALUE (1, '曾粉-海味叻沙 (4包/袋)', 1, '198', '100', '成分含蝦。\n辛辣程度：微辣。\n使用宜蘭老字號虎牌米粉，乾湯兩吃，美味升級。\n濃郁咖哩與香甜椰漿熬製，充滿異國風味，濃而不膩。', 'assets/images/p1.jpg');
 INSERT INTO `Product` VALUE (2, '曾拌麵-香蔥椒麻 (4包/袋)', 1, '168', '100', '五辛素。\n麵體：刀削麵。\n辛辣程度：小辣(花椒麻)。\n堅持手工日曬麵製程；健康純粹，感動美味。\n特選紅蔥與低溫提煉椒麻油，香氣與麻辣口感兼具。', 'assets/images/p2.jpg');
@@ -97,14 +93,12 @@ CREATE TABLE `Message` (
     `ClientID` VARCHAR(4),
     `Mcontent` TEXT,
     `MDate` DATE,
-    PRIMARY KEY (`PID`),
-    FOREIGN KEY(`PID`) REFERENCES `Product`(`PID`),
-    FOREIGN KEY(`ClientID`) REFERENCES `Client`(`ClientID`)
+    PRIMARY KEY (`PID`)
 );
-INSERT INTO `Message` VALUE (1, 'C001', 'GOOD!', '2022-08-15');
-INSERT INTO `Message` VALUE (2, 'C003', '好便宜。', '2022-06-30');
-INSERT INTO `Message` VALUE (3, 'C004', '好讚！', '2022-04-05');
-INSERT INTO `Message` VALUE (4, 'C002', '很喜歡！', '2022-06-07');
+INSERT INTO `Message` VALUE (1, 1, 'GOOD!', '2022-08-15');
+INSERT INTO `Message` VALUE (2, 3, '好便宜。', '2022-06-30');
+INSERT INTO `Message` VALUE (3, 4, '好讚！', '2022-04-05');
+INSERT INTO `Message` VALUE (4, 2, '很喜歡！', '2022-06-07');
 
 CREATE TABLE `noodlemembers` (
   `username` varchar(45) NOT NULL,

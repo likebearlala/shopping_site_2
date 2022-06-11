@@ -4,7 +4,7 @@
 
 if(session.getAttribute("user_email") != null ){
 	if(request.getParameter("user_email")!=null){
-		sql = "UPDATE `noodlemembers` SET `username`='"+request.getParameter("username")+"', `user_email`='"+request.getParameter("user_email")+"', `user_password`='"+request.getParameter("user_password")+"' WHERE `user_email`='"+session.getAttribute("user_email")+"'";	
+		sql = "UPDATE `Client` SET `CName`='"+request.getParameter("username")+"', `CPhone`='"+request.getParameter("user_phone")+"', `CAddress`='"+request.getParameter("user_address")+"', `CAccount`='"+request.getParameter("user_email")+"', `CPassword`='"+request.getParameter("user_password")+"' WHERE `CAccount`='"+session.getAttribute("user_email")+"'";	
 		int no=con.createStatement().executeUpdate(sql); 
     	if (no>0){
 		con.close();//結束資料庫連結
