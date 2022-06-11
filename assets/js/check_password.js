@@ -4,7 +4,6 @@ function check() { //檢查密碼與確認密碼的值有沒有一致
     if (password1 != null & password2 != null){
         if (password1 != password2) {
             alert("密碼不一致請核查");
-            check();
         }
     }
 }

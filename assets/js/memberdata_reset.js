@@ -18,5 +18,5 @@ function changebtn() {
 
 $("#submit").click(function () {
 
-    $("input").prop("disabled", false);
+    $("input").prop("required", false);
 });

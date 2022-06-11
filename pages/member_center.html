@@ -63,7 +63,7 @@
         </div>
     </header>
     <!--網頁最上方固定欄結束-->
-
+    <main>
     <aside>
         <!--左側選單-->
         <div class="aside-member">
@@ -83,20 +83,12 @@
             <div class="memberdata_tital">
                 <!--會員資料標題-->
                 會員資料
-                <!-- <div class="changebtn">
-                    按鈕一修改取消
-                    <img src="../assets/images/others/pencil.png" width="35px">
-                    <button class="activebtn" id="activebtn" onclick="lock(); changebtn();">
-                        <div id="revise" class="">修改</div>
-                        <div id="cancel">取消</div>
-                    </button>
-                </div> -->
             </div>
             <hr>
             <div class="memberdata_all">
                 <div class="memberout">
                     <!--頭貼及登出按鈕-->
-                    <img src="../assets/images/icon/user.png" width="180px">
+                    <img src="../assets/images/others/avatar.png" width="180px">
                     <div class="sign_out">
                         <!--登出鈕-->
                         <button type="submit" class="sign_out-button">登出</button>
@@ -107,7 +99,7 @@
                     <!--method="post"-->
                     <form method="" action="">
                         <div class="changebtn">
-                            <!-- 按鈕一修改取消 -->
+                            <!-- 修改取消鈕 -->
                             <img src="../assets/images/others/pencil.png" width="35px">
                             <button class="activebtn" id="activebtn" onclick="lock(); changebtn();">
                                 <div id="revise" class="">修改</div>
@@ -118,33 +110,26 @@
                             <div class="md-inputone">
                                 <!--左側-->
                                 <input type="email" placeholder="電子郵件" value="" disabled><br>
+                                <input type="text" placeholder="地址" value="" disabled><br>
                                 <input id="Name" type="text" placeholder="姓名" value="" required disabled>
                             </div>
                             <div class="md-inputtwo">
                                 <!--右側-->
+                                <input type="text" placeholder="電話" value="" disabled><br>
                                 <input id="password" type="password" placeholder="密碼" value="" required disabled><br>
-                                <p>* 更改密碼請於下方重新確認 *</p>
-                                <input id="check_password" onblur="check()" type="password" placeholder="確認密碼" required
-                                    disabled>
+                                <input id="check_password" type="password" placeholder="確認密碼"  onblur="check()" required disabled>
+                                <p>* 更改密碼請再次確認 *</p>
                             </div>
                         </div>
                         <div class="md-form_button">
                             <!--下方按鈕-->
-                            <!-- <div class="changebtn">
-                                按鈕一修改取消
-                                <img src="../assets/images/others/pencil.png" width="35px">
-                                <button class="activebtn" id="activebtn" onclick="lock(); changebtn();">
-                                    <div id="revise" class="">修改</div>
-                                    <div id="cancel">取消</div>
-                                </button>
-                            </div> -->
                             <div>
-                                <!--按鈕二確認-->
-                                <button type="submit" id="submit" class="reset_data">確認更改</button>
+                                <!--重設鈕-->
+                                <button type="reset" class="reset_data">清除重設</button>
                             </div>
                             <div>
-                                <!--按鈕三重設-->
-                                <button type="reset" class="reset_data">清除重設</button>
+                                <!--確認鈕-->
+                                <button type="submit" id="submit" class="reset_data">確認更改</button>
                             </div>
                         </div>
                     </form>
@@ -237,7 +222,7 @@
             </div>
         </div>
     </section>
-
+    </main>
     <footer>
         123456
     </footer>

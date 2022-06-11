@@ -4,6 +4,7 @@ aside {
     width: 15%;
     margin: 100px 0 0 0;
 }
+
 aside div {
     margin: 5px 0 0;
     padding: 30px 0;
@@ -11,6 +12,7 @@ aside div {
     font-size: 18px;
     background-color: #22333B;
 }
+
 aside div a {
     color: antiquewhite;
     text-decoration: none;
@@ -26,33 +28,49 @@ section {
     width: 77%;
 }
 
-.memberdata{
-    padding: 0% 5%;
+.memberdata {
+    padding: 0% 0%;
 }
+
+.memberdata hr {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 .memberdata_tital {
     padding: 3% 0 0;
     text-align: center;
     font-size: 30px;
     font-weight: bolder;
-    
+
 }
+
 .memberdata_all {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .memberout {
-    padding: 6.5% 4% 1%;
+    padding: 6.5% 4% 0;
 }
+
 .memberout img {
-    border-radius: 10px;
-    margin: 0%;
-    background-color: #22333B;
+    /* border-radius: 10px;
+    background-color: #22333B; */
+
+    margin-top: 5%;
+    overflow: hidden;
+    border: 5px solid #fafafa;
+    background-color: #fafafa;
+    box-shadow: 0 0 .5rem #babbbc;
+    transform: rotate(-360deg);
+    border-radius: 50%;
 }
 
 .sign_out {
     margin: 30px 50px;
 }
+
 .sign_out button {
     margin: 0;
     padding: 10px 20px;
@@ -67,25 +85,34 @@ section {
 .memberdata_content {
     padding: 0 0 2.5%;
 }
-.memberdata_content form{
-    width: 800px;
+
+.memberdata_content form {
+    width: 850px;
     justify-content: space-around;
 }
+
 .inputdata {
     display: flex;
     justify-content: left;
 }
 
 .md-inputtwo p {
-    text-align: center;
-    margin-bottom: 0%;
+    text-align: right;
+    margin: 0 25px 8px 0;
     color: hsla(29, 100%, 50%, 0.871);
+
 }
-.md-inputone {
+
+/* .md-inputone {
+    display: flex;
+    flex-direction: column;
+    justify-content:first baseline;
+}
+.md-inputtwo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+} */
 
 .memberdata input {
     background-color: white;
@@ -97,12 +124,14 @@ section {
     letter-spacing: 0.2em;
     width: 320px;
 }
+
 .md-form_button {
-    margin: 2% 20%;
+    margin: 2% 17%;
     display: flex;
     width: 50%;
     justify-content: space-around;
 }
+
 .reset_data {
     margin: 0;
     padding: 10px 20px;
@@ -119,11 +148,13 @@ section {
     justify-content: right;
     margin-bottom: 1%;
 }
+
 .changebtn img {
     margin: 10px;
 }
+
 .activebtn {
-    margin: 0;
+    margin-right: 40px;
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
@@ -134,9 +165,9 @@ section {
 }
 
 button:hover {
-    color:#D79B00;
-    background-color:#fff;
-    border:2px #D79B00;
+    color: #D79B00;
+    background-color: #fff;
+    border: 2px #D79B00;
 }
 
 .activebtn img {
@@ -144,12 +175,15 @@ button:hover {
     margin: 5% 10% 5% 0;
     background-color: #f8f1e9;
 }
+
 .changebtn .activebtn div:last-child {
     display: none;
 }
+
 .changebtn .activebtn div:first-child.active {
     display: none;
 }
+
 .changebtn button div:first-child.active+div:last-child {
     display: block;
 }
@@ -159,19 +193,23 @@ button:hover {
 .section-2 {
     margin: 0 60px 60px;
 }
+
 .orderRecord {
     padding: 0% 5% 3%;
 }
+
 .orderRecord_tital {
     padding: 3% 0 0;
     text-align: center;
     font-size: 30px;
     font-weight: bolder;
 }
+
 .orderRecord-table {
     width: 85%;
     margin: 3% auto;
 }
+
 th {
     text-align: center;
     background-color: #647687;
@@ -179,15 +217,18 @@ th {
     font-size: larger;
     padding: 1%;
 }
+
 td {
     text-align: center;
     padding: 2%;
 }
-.orderRecord-table tr{
+
+.orderRecord-table tr {
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
     font-size: large;
 }
+
 .th-date {
     width: 14%;
 }
@@ -195,30 +236,37 @@ td {
 .section-3 {
     margin: 0 60px 60px;
 }
+
 .starRecord {
     padding: 0% 5% 3%;
 }
+
 .starRecord_tital {
     padding: 3% 0 0;
     text-align: center;
     font-size: 30px;
     font-weight: bolder;
 }
+
 .starRecord-table {
     width: 85%;
     margin: 3% auto;
 }
-.starRecord-table tr{
+
+.starRecord-table tr {
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
     font-size: large;
 }
+
 .th-star {
     width: 18%;
 }
+
 .th-product {
     width: 35%;
 }
+
 .checked {
     color: orange;
 }
