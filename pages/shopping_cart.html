@@ -34,19 +34,19 @@
                 <a href="member_center.html">會員中心</a>
             </div>
             <div class="t-aboutUS">
-                <a href="#">關於有料</a>
+                <a href="about_us.html">關於有料</a>
             </div>
         </nav>
         <!--會員及購物車圖標-->
         <div class="t-icon">
             <div class="t-i-user">
-                <a href="#">
+                <a href="sign_in.html">
                     <!--前往會員登入註冊頁-->
                     <img src="../assets/images/icon/user.png" width="40px" alt="會員">
                 </a>
             </div>
             <div class="t-i-cart">
-                <a href="#">
+                <a href="shopping_cart.html">
                     <!--前往購物車頁-->
                     <img src="../assets/images/icon/shopping-cart.png" width="40px" alt="購物車">
                 </a>
@@ -66,31 +66,29 @@
 
 <main>
     <!-- 購物車 -->
-    <section class="Cart-section">
+    <section>
         <img src="../assets/images/icon/shopping-cart.png" width="50px" height="50px">購物車
+        <hr width="80%">
         <form method="post" action="cart_checkout.html" class="">
             <table class="shop_cart">
-                <tr class="shop_cart-tr">
+                <tr>
                     <th>商品品項</th>
                     <th>單價</th>
                     <th>數量</th>
                     <th>總計</th>
                     <th>修改</th>
                 </tr>
-                <tr class="shop_cart-tr">
-                    <td>曾粉 海味叻沙 Seafood Laksa</td>
-                    <td class="price">198</td>
+                <tr class="shop_cart">
+                    <td width>曾粉 海味叻沙 Seafood Laksa</td>
+                    <td class="price">$198</td>
                     <td>
                         <p>
                             <div class="button">
-                                <!--購買數量-->
-                                <input type="button" class="button-num-add" value="-" onclick="minusNUM(0)">
-                                <input type="text" class="number" value="1">
-                                <input type="button" class="button-num-minus" value="+" onclick="addNUM(0)">
+                                <!--購買數量-->1
                             </div>
                         </p>
                     </td>
-                    <td class="amount">198
+                    <td class="amount">$198
                         <em class="show_amount"></em>
                         <!--cart_count.js 自動算出總價-->
                     </td>
@@ -98,21 +96,17 @@
                     <td><input type="button" class="delete" value="刪除" onclick="deleteTR(this)"></td>
                 </tr>
 
-                <tr class="shop_cart-tr">
+                <tr>
                     <td>千拌麵∣醋香麻醬 (3包/袋)</td>
-                    <td class="price">189</td>
+                    <td class="price">$189</td>
                     <td>
                         <p>
                             <div class="button">
-                                <!--購買數量-->
-                                <input type="button" class="button-num-add" value="-" onclick="minusNUM(1)">
-                                <!--onclick裡面的數字為商品品項數量(從0開始算)-->
-                                <input type="text" class="number" value="1" >
-                                <input type="button" class="button-num-minus" value="+" onclick="addNUM(1)">
+                                <!--購買數量-->1
                             </div>
                         </p>
                     </td>
-                    <td class="amount">189</td>
+                    <td class="amount">$189</td>
                     <!--總價-->
                     <td><input type="button" value="刪除" class="delete"></td>
                     <!--刪除商品-->
@@ -122,20 +116,36 @@
                     <td colspan="4" style="text-align: right; padding-right:1em;">
                         商品總額:
                     </td>
-                    <td id="total">1161</td>
-                </tr>
-
-                <!-- 下一步按鈕 -->
-
-                <tr>
-                    <td colspan="5">
-                        <div class="NEXT">
-                            <input type="submit" value="前往結帳" class="buttonLOOK" onsubmit="return validateForm()"/>
-                        </div>
-                    </td>
+                    <td id="total">$1161</td>
                 </tr>
             </table>
         </form>
+        </section>
+
+        <section class="section-deliver">
+                <!-- 運送資訊 -->
+            <form method="post">
+                <div class="text-center">
+                    填寫運送資訊<hr>
+                </div>
+                            <div class="form-lineheight">
+                                <img src="../assets/images/others/point.png" width="24px" height="24px">&nbsp;&nbsp;寄送方式:&nbsp;
+                                <input type="radio" name="SendWay" value="7-11取貨" />7-11取貨&nbsp;
+                                <input type="radio" name="SendWay" value="全家取貨" />全家取貨&nbsp;
+                                <input type="radio" name="SendWay" value="宅配到府" checked />宅配到府
+                            </div>
+                                <br>
+                            <div class="form-lineheight">
+                                <img src="../assets/images/others/point.png" width="24px" height="24px">&nbsp;&nbsp;付款方式:&nbsp;
+                                <input type="radio" name="PayWay" value="貨到付款(現金)" checked />貨到付款(現金)&nbsp;
+                                <input type="radio" name="PayWay" value="信用卡/金融" />信用卡/金融
+                                <br><br>
+                            </div>
+
+                        <div class="NEXT">
+                            <input type="submit" value="前往結帳" class="buttonLOOK"  onclick="success()" />
+                        </div>          
+            </form>
     </section>
 </main>
 
@@ -143,7 +153,6 @@
         Copyright © since 2022 有料 All Rights Reserved.
     </footer>
 
-<script src="../assets/js/button_add_minus.js"></script>
 <script src="../assets/js/cart_delete.js"></script>
 
 </body>

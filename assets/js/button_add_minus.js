@@ -1,5 +1,3 @@
-
-
 function minusNUM(num){
 	let input = Number(document.getElementsByClassName("number")[num].value);
 	if(input != 1){
@@ -32,5 +30,3 @@ function addNUM(num){
 		}
 		document.getElementById("total").innerHTML=total;
 }
-
-

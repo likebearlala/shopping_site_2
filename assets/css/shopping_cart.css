@@ -9,7 +9,7 @@
     align-items: center;
     margin: auto;
     margin-top: 10%;
-    width: 60%;
+    /* width: 60%; */
 }
 html{
     height: 100%;
@@ -29,6 +29,7 @@ body{
     justify-content: center;
     align-items: center;
     margin: auto;
+    display: flex;
 }
 
 td{
@@ -42,13 +43,14 @@ th{
 
 
 /* 前往結帳button外觀 */
-.buttonLOOK{border:0;
+.buttonLOOK{
+    border:0;
     background-color:#22333B;
     color:#fff;
     border-radius:10px;
     cursor:pointer;
     width:150px;
-    height:50px
+    height:50px;
 }
   
  input:hover {
@@ -67,6 +69,45 @@ th{
 .delete :hover {
     border: 1px solid black;
 }
+.form-lineheight{
+    line-height: 1em;
+    display: flex;
+    align-items: baseline;
+    margin: auto;
+}
+
+table{
+    width: 100%;
+    text-align: left;
+}
+section{
+    margin: 5% auto;
+    margin-top: 8rem;
+    padding: 2%;
+    /* background-color: rgba(255, 250, 250, 0.8); */
+    border-radius: 2em;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    letter-spacing:.3em;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* margin: 120px 60px 50px; */
+    border: #c9c2bbde solid;
+    border-radius: 10px;
+    /* float: right;
+    width: 77%; */
+}
+.section-deliver{
+    margin-top: 3rem;
+}
+/* .towROW{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+} */
 
 .footer{
     grid-row-start: 2;/*欄位從第二條橫線開始*/
