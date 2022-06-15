@@ -17,7 +17,7 @@ body {
   margin: 5% auto;
   margin-top: 8%;
   border-radius: 20px 20px;
-  border: 2px solid gray;
+  border: 2px #c9c2bbde solid;
   width: 70%;
   height: 50%;
 }
