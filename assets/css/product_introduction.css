@@ -7,6 +7,10 @@ body{
   flex-direction: row;
 }
 
+body {
+  margin: 0%;
+  background-color: #EAE0D5;
+}
 .product_top{
   max-width: 1200px;
   padding: 3%;

@@ -4,12 +4,33 @@
     padding: 0;
     list-style: none;
 }
+#logo-img{
+   margin-left:2rem;
+   margin-right:6rem;
+}
+#logo-img:hover{
+    filter:contrast(50%);
+}
 body {
     margin: 0%;
     background-color: #EAE0D5;
 }
+.bg-amos{
+    background-color: #22333B;
+    color: antiquewhite;
+}
 
 header {
+    margin: 0%;
+    padding: 0;
+    background-color: #22333B;
+}
+.nav-item{
+    font-size: 23px;
+    padding-right: 4rem;
+}
+
+/* header {
     width: 100%;
     margin: 0%;
     background-color: #22333B;
@@ -17,6 +38,9 @@ header {
     position: fixed;
     z-index: 50;
 }
+div.t a:hover:not(.active) {
+    background-color: wheat;
+  }
 
 .t-logo {
     margin: 15px 50px 5px;
@@ -32,8 +56,8 @@ nav a {
     text-decoration: none;
     padding: 25px 35px 20px;
     margin: 0;
-}
-.t-showProducts {
+} 
+/* .t-showProducts {
     padding: 25px 0 0 ;
     margin: 0 40px 0 0;
 }
@@ -43,22 +67,23 @@ nav a {
 }
 .t-aboutUS {
     padding: 25px 0 0 ;
-}
+} */
 
 .t-icon {
     display: flex;
-    padding: 40px 25px 0px;
+    padding: 0 4%;
 }
 .t-i-user {
-    margin: 0 30px 0 20px;
+    margin:4%;
+    margin-right: 30px;
 }
 .t-i-cart {
-    margin: 0 20px 0 20px;
+    margin:4%;
 }
 
-.t-search{
+/* .t-search{
     padding: 45px 10px 0;
-}
+} */
 .searchForm {
     display: flex;
 }
@@ -79,13 +104,9 @@ nav a {
     background-color: #EAE0D5;
 }
 
-.slide {
-    padding: 50px 0px 40px;
-}
-
 main {
-    min-width: calc(100% - 80px);
-}
+    min-width: calc(100% - 80px); 
+ } 
 footer {
     width: 100%;
     height: 80px;
@@ -94,12 +115,12 @@ footer {
     color: #EAE0D5;
     text-align: center;
     background: #22333B;
-}
+} 
 
 /* +-button */
 
 
-.button-num{
+.button-num-123{
     border:1px solid lightgray;
     width:25px;
     height:35px;
@@ -117,7 +138,6 @@ footer {
     height:35px;
     cursor:pointer;
 }
-    
     .number{
     border:none;
     border-top:1px solid lightgray;
