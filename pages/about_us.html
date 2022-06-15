@@ -16,49 +16,58 @@
     <header>
         <!--網頁最上方固定欄-->
         <!--LOGO有料-->
-        <div class="t-logo">
-            <a href="../index.html">
-                <img src="../assets/images/icon/logo.png" width="100px" alt="有料">
-            </a>
-        </div>
-        <!--頁面選單-->
-        <nav>
-            <div class="t-showProducts">
-                <a href="../pages/products_ALL.html">有料的麵</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-amos" role="navigation">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+                <img src="../assets/images/icon/logo.png" width="100"  alt="有料" class="d-inline-block align-text-top" id="logo-img"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+               <!--頁面選單-->
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                  <!-- <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="products_ALL.html">有料的麵</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="member_center.html">會員中心</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="about_us.html">關於有料</a>
+                  </li> 
+                </ul>
+                <!--會員及購物車圖標-->
+                <div class="t-icon">
+                    <div class="t-i-user">
+                        <a href="sign_in.html">
+                            <!--前往會員登入註冊頁-->
+                            <img src="../assets/images/icon/user.png" width="40px" alt="會員">
+                        </a>
+                    </div>
+                    <div class="t-i-cart">
+                        <a href="shopping_cart.html">
+                            <!--前往購物車頁-->
+                            <img src="../assets/images/icon/shopping-cart.png" width="40px" alt="購物車">
+                        </a>
+                    </div>
+                </div>
+                 <!--搜尋欄-->
+                <div class="t-search">
+                    <form class="searchForm">
+                        <input type="text" class="searchText" placeholder="Search...">
+                        <button type="submit" class="searchIcon">
+                            <img src="../assets/images/icon/search.png" width="20px">
+                        </button>
+                    </form>
+                </div>
+              </div>
             </div>
-            <div class="t-MemberCenter">
-                <a href="../pages/member_center.html">會員中心</a>
-            </div>
-            <div class="t-aboutUS">
-                <a href="about_us.html">關於有料</a>
-            </div>
-        </nav>
-        <!--會員及購物車圖標-->
-        <div class="t-icon">
-            <div class="t-i-user">
-                <a href="../pages/sign_in.html">
-                    <!--前往會員登入註冊頁-->
-                    <img src="../assets/images/icon/user.png" width="40px" alt="會員">
-                </a>
-            </div>
-            <div class="t-i-cart">
-                <a href="../pages/shopping_cart.html">
-                    <!--前往購物車頁-->
-                    <img src="../assets/images/icon/shopping-cart.png" width="40px" alt="購物車">
-                </a>
-            </div>
-        </div>
-        <!--搜尋欄-->
-        <div class="t-search">
-            <form class="searchForm">
-                <input type="text" class="searchText" placeholder="Search...">
-                <button type="submit" class="searchIcon">
-                    <img src="../assets/images/icon/search.png" width="20px">
-                </button>
-            </form>
-        </div>
+          </nav>
+           <!--網頁最上方固定欄結束-->
     </header>
-    <!--網頁最上方固定欄結束-->
     <main>
         <section class="about">
             <div class="about_tital">
