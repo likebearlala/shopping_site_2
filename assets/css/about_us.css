@@ -82,6 +82,10 @@ span {
     display: flex;
     margin: auto;
 }
+.wrap a {
+    text-decoration: none;
+    color: black;
+}
 
 .item {
     margin: auto;

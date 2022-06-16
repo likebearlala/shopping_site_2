@@ -14,8 +14,7 @@ body {
 .product_top{
   max-width: 1200px;
   padding: 3%;
-  margin: 5% auto;
-  margin-top: 8%;
+  margin: 5% auto 0;
   border-radius: 20px 20px;
   border: 2px #c9c2bbde solid;
   width: 70%;
@@ -25,11 +24,10 @@ body {
 .product_intro{
   max-width: 1200px;
   padding: 3%;
-  margin: 0% auto;
-  margin-top: 5%;
+  margin: 5% auto 0;
   /* section2 */
   border-radius: 20px 20px;
-  border: 2px solid gray;
+  border: 2px #c9c2bbde solid;
   width: 70%;
   height: 50%;
   line-height: 3em;
@@ -38,8 +36,7 @@ body {
 .product_comment{
   max-width: 1200px;
   padding: 3%;
-  margin: 3% auto;
-  margin-top: 5%;
+  margin: 4% auto;
   /* section3 */
   border-radius: 20px 20px;
   border: 2px solid gray;
@@ -63,7 +60,8 @@ body {
   justify-content: center;
 }
 .image img{
-  max-width: 370px;
+  width: 100%;
+  max-width: 350px;
   height: auto;
   overflow: hidden;
   border: 1px solid black;
@@ -76,8 +74,9 @@ body {
   /* align-items: center;
   justify-content: center;
   margin: auto; */
-  line-height: 4;
+  /* line-height: 2; */
 }
+
 .inventory{ /*庫存*/
   color:#22333B;
 }
@@ -85,7 +84,22 @@ body {
   padding-bottom: 1dem;
   /* margin: left; */
 }
-
+.button {
+  margin-top: 5%;
+}
+.number {
+  width: 40px;
+}
+.button-num-232 {
+  margin: 10px;
+  width: 30px;
+  height:fit-content;
+}
+.button-num {
+  margin: 10px;
+  width: 30px;
+  height:fit-content;
+}
 .introduction{
   margin: left;
 }
@@ -121,6 +135,7 @@ body {
 
 /* 使用者名稱 */
 .username{
+  margin: 0%;
   padding: 1em;
   font-size: 1.2em;
 }
@@ -129,6 +144,9 @@ body {
 }
 .comment-timestamp{
   color:gray;
+}
+.comment_name {
+  padding: 0.7em;
 }
 
 
@@ -148,7 +166,7 @@ body {
     justify-content:left;
     align-items: left;
     /* margin: auto; */
-    width: 15%;
+    width: 20%;
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
@@ -159,6 +177,7 @@ body {
   }
 /* Button外觀 */
 .buttonLOOK{
+  text-align: center;
   border:0;
   background-color:#22333B;
   color:#fff;
