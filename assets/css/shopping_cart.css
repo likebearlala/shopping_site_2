@@ -31,6 +31,9 @@ body{
     display: flex;
 }
 
+th{
+    border-top: #22333B 1 px solid;
+}
 td{
     text-align: center;
 }
@@ -39,7 +42,6 @@ th{
     background-color: #647687;
     color: white;
 }
-
 
 /* 前往結帳button外觀 */
 .buttonLOOK{
@@ -71,11 +73,10 @@ th{
     align-items: baseline;
     margin: auto;
 }
-
 table{
     width: 100%;
-    text-align: left;
 }
+
 section{
     margin: 2% auto;
     margin-top: 3rem;
@@ -95,14 +96,35 @@ section{
     margin-top: 3rem;
     margin-bottom: 4rem;
 }
-/* .towROW{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-} */
 
 .footer{
     grid-row-start: 2;/*欄位從第二條橫線開始*/
-  grid-row-end: 3;/*欄位從第三條橫線結束*/
+    grid-row-end: 3;/*欄位從第三條橫線結束*/
+}
+
+/* google image */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+
+@media(max-width:768px) {
+    table {
+        width: 30%;
+    }
+    section{
+        width: 60%;
+    }
+}
+
+@media(max-width:569px) {
+    table {
+       width: 10%;
+    }
+    section{
+        width: 60%;
+    }
 }
