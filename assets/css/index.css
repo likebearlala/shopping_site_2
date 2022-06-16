@@ -34,3 +34,20 @@
 .slide {
     padding: 0px 0px 40px;
 }
+@media(max-width:768px) {
+    .bestsellnum img {
+        width: 60%;
+    }
+    .bestsellnum {
+        width: 30%;
+    }
+}
+
+@media(max-width:569px) {
+    .bestsellnum img {
+        width: 80%;
+    }
+    .bestsellnum {
+        width:50%;
+    }
+}

@@ -70,3 +70,10 @@ input.buttonLOOK:hover {
 #user_password{
   padding: .3em;
 }
+
+
+@media(max-width:569px) {
+  .sign_in{
+   width: 80%;
+  }
+}

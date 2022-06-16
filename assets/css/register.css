@@ -51,9 +51,6 @@ section{
     padding-right: 0%;
     text-align: left;
 }
-/* .button{
-    margin: 5px;
-} */
 input {
     padding: .3em;
 }
@@ -79,37 +76,21 @@ input {
 
 @media(max-width:480px) {
     .member_register {
-        width: 60%;
-        padding: 45%;
-        padding-top: 3px;
-        margin: 10%;
-        margin-top: 150px;
+        width: 70%;
+        margin: 2% auto;
     }
-
 }
 @media(max-width:850px) {
     .member_register {
-        width: 60%;
-        padding: 5%;
-        padding-top: 3px;
-        margin: 10%;
-        margin-top: 150px;
+        width: 70%;
+        margin: 2% auto;
     }
 }
 @media(max-width:1200px) {
     .member_register {
-        width: 60%;
-        padding: 25%;
-        padding-top: 3px;
-        margin: 5%;
-        margin-top: 150px;
-
+        width: 80%;
+        margin: 2% auto;
     }
-    section{
-        justify-content: center;
-        align-items: center;
-    }
-
 }
 
 
