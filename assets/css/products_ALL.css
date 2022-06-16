@@ -81,12 +81,22 @@ section {
 
 @media(max-width:768px) {
     .products {
-        height: 46%;
+        height: 200px;
+        width: 200px;
+    }
+    .products p{
+        width: 200px;
+        height: 10px;
     }
 }
 
 @media(max-width:569px) {
-    .products {
-        height: 96%;
+    .Row img {
+        height: 200px;
+        width: 200px;
+    }
+    .products p{
+        width: 200px;
+        height: 40px;
     }
 }
