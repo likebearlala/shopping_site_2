@@ -30,13 +30,10 @@ section{
   font-weight: bold;
 }
 .image{
-  /* padding: 1em; */
   padding-bottom: 2em;
-  /* margin: 0 auto; */
   position: relative;
   width: 35%;
   max-height: auto;
-  /* border: 2px solid red; */
   align-items: center;
   justify-content: center;
 }
@@ -48,33 +45,22 @@ section{
   border: 1px solid black;
 }
 .text{  /*商品*/
-  /* margin: 5px; */
   width: 60%;
   padding: 5px;
-  /* border:2px solid  #22333B; */
-  /* align-items: center;
-  justify-content: center;
-  margin: auto; */
-  /* line-height: 2; */
 }
 
 .inventory{ /*庫存*/
   color:#22333B;
+  letter-spacing:2%;
 }
 .title{
-  padding-bottom: 1dem;
-  /* margin: left; */
+  padding-bottom: 1rem;
 }
 .button {
   margin-top: 5%;
 }
 .number {
   width: 40px;
-}
-.button-num-232 {
-  margin: 10px;
-  width: 30px;
-  height:fit-content;
 }
 .button-num {
   margin: 10px;
@@ -89,29 +75,33 @@ section{
   .image {
       width: 32%;
   }
-  /* .section{
-    margin-top: 40%;
+  .section{
     margin: 80%;
-  } */
+  }
 }
 
 @media(max-width:768px) {
   .image {
-      width: 46%;
+      width: 60%;
   }
-  /* .section{
-    margin-top: 40%;
-    margin: 80%;
-  } */
+  section{
+    width: 20%;
+  }
+  input{
+    width: 50%;
+  }
 }
 
 @media(max-width:569px) {
   .image {
       width: 96%;
   }
-  /* .section{
-    margin-top: 30%;
-  } */
+  section{
+    width:  50%;
+  }
+ input{
+    width: 50%;
+  }
 }
 
 /* 使用者名稱 */
