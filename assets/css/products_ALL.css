@@ -2,7 +2,7 @@ aside {
     position: fixed;
     float: left;
     width: 15%;
-    margin: 100px 0 0 0;
+    margin: 30px 0 0 0;
 }
 aside div {
     margin: 5px 0 0;
@@ -19,9 +19,9 @@ aside div a {
 }
 
 section {
-    margin: 120px 60px;
+    margin: 40px 60px;
     border: #c9c2bbde solid;
-    border-radius: 1%;
+    border-radius: 10px;
     float: right;
     width: 77%;
 }
