@@ -5,23 +5,48 @@
 
 section {
     margin: 0%;
-    padding-top: 7%;
+    padding-top: 3%;
 
 }
 
 .sign_in{
-    margin: 4% auto;
-    padding: 6em;
+    margin: 0% auto;
     display: block;
-    width: 25%;
+    width: 40%;
     text-align: center;
     border-radius: 25px;
     border: 2px solid #D79B00;
     background-color: rgba(255, 250, 250, 0.8);
     border-spacing: 10px;
     box-shadow: 6px 4px 2px #444;
-    line-height: 3em;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    /* line-height: 3em; */
 }
+
+.sign_in img {
+  margin-top: 10%;
+}
+
+.sign_in h1 {
+  margin: 3% 0;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.sign_in p {
+  margin: 5% 0;
+}
+
+.sign_in input {
+  margin-left: 5px;
+}
+
+.register {
+  margin: 2% 0 10%;
+}
+
+
 .buttonLOOK{
   border:0;
   background-color:#22333B;
