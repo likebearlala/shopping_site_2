@@ -85,6 +85,7 @@ span {
 .wrap a {
     text-decoration: none;
     color: black;
+    
 }
 
 .item {
@@ -111,6 +112,8 @@ span {
     background-color: #1b2d35ad;
     opacity: 0;
     transition: 1s;
+    cursor: url("../images/others/instagram.ico"), auto;
+    
 }
 
 .item:hover .txt {
@@ -139,6 +142,7 @@ span {
 .name {
     padding: 15px;
     position: relative;
+    cursor: url("../images/others/instagram.ico"), auto;
 }
 
 .name:before {
