@@ -17,6 +17,10 @@ aside div a {
     padding: 25px 60px;
     margin: 0;
 }
+aside a:hover {
+    color: white;
+    font-size: 20px;
+}
 
 section {
     margin: 40px 60px;

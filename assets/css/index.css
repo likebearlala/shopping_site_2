@@ -22,6 +22,7 @@
 .bestsellnum {
     width: 400px;
 }
+
 .bestsellnum img {
     border-radius: 15px;
 }
@@ -31,8 +32,11 @@
 /* .slide {
     padding: 50px 0px 40px;
 } */
-.slide {
+/* .slide {
     padding: 0px 0px 40px;
+} */
+.slide {
+    margin-bottom: 3%;
 }
 @media(max-width:768px) {
     .bestsellnum img {
@@ -50,4 +54,13 @@
     .bestsellnum {
         width:50%;
     }
+}
+
+.bestsell-number a img {
+    transform:scale(1,1);
+    transition: all 1s ease-out;
+}
+
+.bestsell-number a img:hover {
+    transform:scale(1.1,1.1);
 }

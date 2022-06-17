@@ -2,7 +2,7 @@ aside {
     position: fixed;
     float: left;
     width: 15%;
-    margin: 100px 0 0 0;
+    margin: 50px 0 0 0;
 }
 
 aside div {
@@ -19,9 +19,12 @@ aside div a {
     padding: 25px 60px;
     margin: 0;
 }
-
+aside a:hover {
+    color: white;
+    font-size: 20px;
+}
 section {
-    margin: 120px 60px 50px;
+    margin: 60px 60px 50px;
     border: #c9c2bbde solid;
     border-radius: 10px;
     float: right;
