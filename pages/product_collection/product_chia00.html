@@ -90,7 +90,7 @@
                     <img src="../../assets/images/products/chia00.jpg" class="image-img">
                 </div>
                 <div class="text">
-                    <form method="" action="../shopping_cart.html">
+                    <form method="post" action="../shopping_cart.html">
                         <h2>賈以食日-泰式酸辣粉（1盒/3入）</h2>
                         <!--商品名字--><br>
                         <h2 class="price">NT$229</h2>
@@ -100,8 +100,7 @@
                         <div class="button">數量：
                             <!--購買數量-->
                             <input type="button" class="button-num" value="-" onclick="minusNUM(0)">
-                            <input type="text" class="number" value="1"
-                                onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">
+                            <input type="text" class="number" value="1">
                             <input type="button" class="button-num" value="+" onclick="addNUM(0)">
                             <font class="inventory">庫存:99</font>
                             <!--商品剩餘庫存-->
@@ -115,93 +114,107 @@
 
 
         <!--商品介紹-->
-        <section class="product_intro">
-            <div class="title">
-                <h2>商品介紹</h2>
-            </div>
-            <hr width="100%">
-            <div class="introduction">
-                <ul>
-                    <li>精選泰式辛香料調配而成酸辣醬</li>
-                    <li> 加水即可呈現泰國TOM YUM湯頭</li>
-                    <li> 純綠豆製成彈牙細寬粉吸附整個湯汁</li>
-                    <li>搭配新鮮乾燥高麗菜增添豐富口感</li>
-                    <li> 撒上泰式辣椒粉提升整體香辣層次</li>
-                    <li>在家也能嚐到道地異國風味</li>
-                    <li> 不論何時都能輕易地享用泰式酸辣粉</li>
-                </ul>
-            </div>
-        </section>
-
-
-        <!-- 留言板 -->
-        <section class="product_comment">
-            <h2 class="title">商品評論</h2>
-            <form method="post" action="">
-                <hr width="100%">
-                <p>
-                    <div class="comment-userphoto">
-                        <img class="userphoto" src="../../assets/images/others/avatar.png" width="125px" height="125px">
-                        <!--使用者圖片-->
-                    </div>
-                    <h3 class="username">有廖美女</h3>
-                    <!--使用者姓名-->
-                </p>
-                <p>
-                    <div class="star">
-                        <div class="my-rating-6"></div>
-                        <input type="hidden" id="test" name="star">
-                        <!--會傳值的星星-->
-                    </div>
-                </p>
-                <p><textarea rows="5" cols="70" placeholder="留下您對於商品的評論...."></textarea></p> <!-- 輸入評論-->
-
-                <p><input type="submit" class="buttonLOOK" value="留下評論"></p>
-            </form>
-            <!--寫死的留言板-->
-            <hr>
-
-
-            <!-- 範例評論開頭1 -->
-            <div class="comment-userphoto">
-                <img src="../../assets/images/others/avatar.png" width="75px" height="75px">
-            </div>
-            <div class="comment_name">好順利</div>
-            <div class="star">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <!--to後端:5個checked就是5星，4個cheched就是4星，checked代表星星數量-->
-            </div>
-            <p class="comment-timestamp">2022-04-27 01:46:45 </p>
-
-            拿到貨好快好順利!!拆封後煮來吃，確實很好吃!!
-            <hr>
-
-
-            <!-- 範例評論開頭1 -->
-            <div class="comment-userphoto">
-                <img src="../../assets/images/others/avatar.png" width="75px" height="75px">
-            </div>
-            <div class="comment_name">料美女</div>
-            <div class="star">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <!--to後端:5個checked就是5星，4個cheched就是4星，checked代表星星數量-->
-            </div>
-            <p class="comment-timestamp">2022-04-27 01:46:45 </p>
-
-            貨很快速!!
-
-            <!-- 範例評論結尾 -->
-        </section>
 
     </main>
+    <section class="product_intro">
+        <div class="title">
+            <h2>商品介紹</h2>
+        </div>
+        <hr width="100%">
+
+        <div class="introduction">
+            <ul>
+                <li>精選泰式辛香料調配而成酸辣醬</li>
+                <li> 加水即可呈現泰國TOM YUM湯頭</li>
+                <li> 純綠豆製成彈牙細寬粉吸附整個湯汁</li>
+                <li>搭配新鮮乾燥高麗菜增添豐富口感</li>
+                <li> 撒上泰式辣椒粉提升整體香辣層次</li>
+                <li>在家也能嚐到道地異國風味</li>
+                <li> 不論何時都能輕易地享用泰式酸辣粉</li>
+
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- 留言板 -->
+    <br>
+
+    <section class="product_comment">
+        <h2 class="title">商品評論</h2>
+        <form method="post" action="">
+            <hr width="100%"><br><br><br>
+            <p>
+                <div class="comment-userphoto">
+                    <img class="userphoto" src="../../assets/images/others/avatar.png" width="125px" height="125px">
+                    <!--使用者圖片-->
+                </div>
+                <h3 class="username">有廖美女</h3>
+                <!--使用者姓名-->
+            </p>
+            <p>
+                <div class="star">
+                    <div class="my-rating-6"></div>
+                    <input type="hidden" id="test" name="star">
+                    <!--會傳值的星星-->
+                </div>
+            </p>
+            <p><textarea rows="5" cols="70" placeholder="留下您對於商品的評論...."></textarea></p> <!-- 輸入評論-->
+
+            <p><input type="submit" class="buttonLOOK" value="留下評論"></p>
+        </form>
+        <br><br><br>
+        <!--寫死的留言板-->
+        <hr>
+
+
+        <!-- 範例評論開頭1 -->
+        <br><br>
+        <div class="comment-userphoto">
+            <img src="../../assets/images/others/avatar.png" width="75px" height="75px">
+        </div>
+        <div class="comment_name">好順利</div>
+        <div class="star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <!--to後端:5個checked就是5星，4個cheched就是4星，checked代表星星數量-->
+        </div>
+        <p class="comment-timestamp">2022-04-27 01:46:45 </p>
+
+        拿到貨好快好順利!!拆封後煮來吃，確實很好吃!!
+        <hr>
+
+
+        <!-- 範例評論開頭1 -->
+        <br><br>
+        <div class="comment-userphoto">
+            <img src="../../assets/images/others/avatar.png" width="75px" height="75px">
+        </div>
+        <div class="comment_name">料美女</div>
+        <div class="star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <!--to後端:5個checked就是5星，4個cheched就是4星，checked代表星星數量-->
+        </div>
+        <p class="comment-timestamp">2022-04-27 01:46:45 </p>
+
+        貨很快速!!
+
+
+
+        <!-- 範例評論結尾 -->
+
+
+
+    </section>
+
+
 
 
 

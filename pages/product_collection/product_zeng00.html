@@ -85,14 +85,14 @@ body {
                 <img src="../../assets/images/products/zeng_guocheng00.jpg" class="image-img">
             </div>
             <div class="text">
-                <form method="" action="../shopping_cart.html">
+                <form method="post" action="../shopping_cart.html">
                         <h2>曾粉 海味叻沙 Seafood Laksa</h2> <!--商品名字--><br>
                         <h2 class="price">NT$198</h2> <!--商品價格-->
 
                     
                         <div class="button">數量： <!--購買數量-->
                             <input type="button" class="button-num" value="-" onclick="minusNUM(0)">
-                            <input type="text" class="number" value="1" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">
+                            <input type="text" class="number" value="1">
                             <input type="button" class="button-num" value="+" onclick="addNUM(0)"> 
                             <font class="inventory">庫存:99</font>  <!--商品剩餘庫存-->
                             <input type="submit" class="buttonLOOK" value="加到購物車"  onclick="">
@@ -125,12 +125,12 @@ body {
 
 
 <!-- 留言板 -->
-
+<br>
 
     <section class="product_comment">
         <h2 class="title">商品評論</h2>
                     <form method="post" action="">
-                        <hr width="100%">
+                        <hr width="100%"><br><br><br>
                     <p>
                         <div class="comment-userphoto">
                             <img class="userphoto" src="../../assets/images/others/avatar.png" 
@@ -147,13 +147,13 @@ body {
                         
                         <p><input type="submit" class="buttonLOOK" value="留下評論" ></p>
                     </form>
-                    
+                    <br><br><br>
                     <!--寫死的留言板-->
                     <hr>
 
 
                 <!-- 範例評論開頭1 -->
-            
+                <br><br>
                 <div class="comment-userphoto">
                     <img  src="../../assets/images/others/avatar.png"
                         width="75px" height="75px">
@@ -173,7 +173,7 @@ body {
 
 
                                 <!-- 範例評論開頭1 -->
-                      
+                                <br><br>
                                 <div class="comment-userphoto">
                                     <img  src="../../assets/images/others/avatar.png"
                                         width="75px" height="75px">
