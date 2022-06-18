@@ -9,6 +9,10 @@
     align-items: center;
     margin: auto;
     margin-top: 1%;
+    width: 100%;
+}
+.shop_form{
+    width: 80%;
 }
 html{
     height: 100%;
