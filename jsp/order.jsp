@@ -1,7 +1,7 @@
 <%@page contentType="text/html;charset=UTF-8" language="java" import="java.sql.*"%>
 <%@include file="config.jsp" %>
 <%if(session.getAttribute("admin") != null){
-	sql="select * from Product";
+	sql="select * from `order`;";
     ResultSet rs=con.createStatement().executeQuery(sql);
 %>
 <html lang="en">
@@ -63,43 +63,41 @@
     <!--左側選單結束-->
 
     <section>
-        <div class="memberdata">
-            <table style="border: 3px solid; text-align: center;">
+        <div>
+            <table style="border: 3px solid; text-align: center;width:100%;">
                 <tr>
-                    <td style="padding: 3% 0 0;text-align: center;font-size: 30px;font-weight: bolder;" colspan="8" >
-                        商品資料
+                    <td style="padding: 3% 0 0;text-align: center;font-size: 30px;font-weight: bolder;" colspan="7" >
+                        訂單紀錄
                         <hr>
                     </td>
                 </tr>
                 <tr style="border: 3px solid; font-weight: bolder;">
-                    <td>產品編號</td>
-                    <td>產品名稱</td>
-                    <td>廠商編號</td>
-                    <td>價格</td>
-                    <td>庫存</td>
-					<td>銷量</td>
-                    <td>內容</td>
-                    <td>圖片</td>
+                    <td>訂單編號</td>
+					<td>訂購帳號</td>
+					<td>訂購日期</td>
+					<td>訂購內容</td>
+					<td>訂購金額</td>
+					<td>配送方式</td>
+					<td>付款方式</td>
                 </tr>
-                <%
-                while(rs.next()){
-                    out.print("<tr style='border: 1px solid;'>");
-                    out.print("<td>"+rs.getString(1)+"</td>");
-                    out.print("<td>"+rs.getString(2)+"</td>");
-                    out.print("<td>"+rs.getString(3)+"</td>");
-                    out.print("<td>$"+rs.getString(4)+"</td>");
-                    out.print("<td>"+rs.getString(5)+"</td>");
-					out.print("<td>"+rs.getString(6)+"</td>");
-                    out.print("<td style='width:400px;text-align:left;'>"+rs.getString(7)+"</td>");
-                    out.print("<td style='width:200px;word-break:break-all;'>"+rs.getString(8)+"</td>");
-                    out.print("</tr>");
-                }
-				con.close();
-                %>
+<%
+			while(rs.next()){
+				out.print("<tr style='border: 1px solid;'>");
+                out.print("<td>"+rs.getString("OrderID")+"</td>");
+				out.print("<td>"+rs.getString("CAccount")+"</td>");
+				out.print("<td>"+rs.getString("ODate")+"</td>");
+				out.print("<td>"+rs.getString("PName")+"</td>");
+				out.print("<td>$"+rs.getString("OTotal")+"</td>");
+				out.print("<td>"+rs.getString("OSendway")+"</td>");
+				out.print("<td>"+rs.getString("OPayway")+"</td>");
+                out.print("</tr>");
+			}
+			con.close();
+%>
             </table>
         </div>
     </section>
-	
+
     <footer>
         Copyright © since 2022 有料 All Rights Reserved.
     </footer>

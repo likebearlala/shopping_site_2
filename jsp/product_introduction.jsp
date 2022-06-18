@@ -20,181 +20,245 @@
     <link rel="stylesheet" href="../assets/css/all.css">
     <link rel="stylesheet" href="../assets/css/product_introduction.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
+<style>
+    body {
+        margin: 0%;
+        background-color: #EAE0D5;
+    }
+</style>
 
 <body>
     <header>
         <!--網頁最上方固定欄-->
         <!--LOGO有料-->
-        <div class="t-logo">
-            <a href="../index.jsp">
-                <img src="../assets/images/icon/logo.png" width="100px" alt="有料">
-            </a>
-        </div>
-        <!--頁面選單-->
-        <nav>
-            <div class="t-showProducts">
-                <a href="products_ALL.jsp">有料的麵</a>
-            </div>
-            <div class="t-MemberCenter">
-                <a href="member_center.html">會員中心</a>
-            </div>
-            <div class="t-aboutUS">
-                <a href="#">關於有料</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-amos" role="navigation">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.jsp">
+                    <img src="../assets/images/icon/logo.png" width="100" alt="有料"
+                        class="d-inline-block align-text-top" id="logo-img"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--頁面選單-->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        <!-- <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="products_ALL.jsp">有料的麵</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="user.jsp">會員中心</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about_us.jsp">關於有料</a>
+                        </li>
+                    </ul>
+                    <!--會員及購物車圖標-->
+                    <div class="t-icon">
+                        <div class="t-i-user">
+<%
+String a = "";
+if(session.getAttribute("user_email") != null && !session.getAttribute("user_email").equals("")){
+	a = "user.jsp";
+}
+else
+	a = "sign_in.jsp";
+%>
+                            <a href="<%=a%>">
+                                <!--前往會員登入註冊頁-->
+                                <img src="../assets/images/icon/user.png" width="40px" alt="會員">
+                            </a>
+                        </div>
+                        <div class="t-i-cart">
+                            <a href="shopping_cart.jsp">
+                                <!--前往購物車頁-->
+                                <img src="../assets/images/icon/shopping-cart.png" width="40px" alt="購物車">
+                            </a>
+                        </div>
+                    </div>
+                    <!--搜尋欄-->
+                    <div class="t-search">
+                        <form class="searchForm" action="search.jsp">
+                            <input type="text" class="searchText" placeholder="Search..." name="search">
+                            <button type="submit" class="searchIcon">
+                                <img src="../assets/images/icon/search.png" width="20px">
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </nav>
-        <!--會員及購物車圖標-->
-        <div class="t-icon">
-            <div class="t-i-user">
-                <a href="sign_in.html">
-                    <!--前往會員登入註冊頁-->
-                    <img src="../assets/images/icon/user.png" width="40px" alt="會員">
-                </a>
-            </div>
-            <div class="t-i-cart">
-                <a href="shopping_cart.html">
-                    <!--前往購物車頁-->
-                    <img src="../assets/images/icon/shopping-cart.png" width="40px" alt="購物車">
-                </a>
-            </div>
-        </div>
-        <!--搜尋欄-->
-        <div class="t-search">
-            <form class="searchForm">
-                <input type="text" class="searchText" placeholder="Search...">
-                <button type="submit" class="searchIcon">
-                    <img src="../assets/images/icon/search.png" width="20px">
-                </button>
-            </form>
-        </div>
+        <!--網頁最上方固定欄結束-->
     </header>
-    <!--網頁最上方固定欄結束-->
-    <br><br>
 
+    <main>
+        <!-- 商品介紹頁面 -->
 
-<!-- 商品介紹頁面 -->
+        <section class="product_top">
+            <!--商品圖片-->
 <%  
     try {
 		if(con.isClosed())
             out.println("連線建立失敗");
         else{	
-            //String PID=request.getParameter("PID");
 			sql = "SELECT * FROM `product` WHERE `PID`="+request.getParameter("name");
             ResultSet tmp =  con.createStatement().executeQuery(sql);
 			tmp.next();
-			%>
-<section class="product_top">
-   <!--商品圖片-->
-   <div class="TOPbody">
-            <div class="image">
-                <img src="<%out.println(tmp.getString("PImg"));%>" >
-            </div>
-            <div class="text">
-                <form method="post" action="addcart.jsp">
-                        <h2 name="PName"><%out.println(tmp.getString("PName"));%></h2> <!--商品名字-->
-                        <h2 class="price" name="PPrice">NT$<%out.println(tmp.getString("PPrice"));%></h2> <!--商品價格-->
-                    <p>
-                        <div class="button">數量： <!--購買數量-->
+			String PID = tmp.getString("PID");
+%>
+            <div class="TOPbody">
+                <div class="image">
+                    <img src="<%out.println(tmp.getString("PImg"));%>" class="image-img">
+                </div>
+                <div class="text">
+                    <form method="post" action="cartadd.jsp">
+                        <h2><%out.println(tmp.getString("PName"));%></h2>
+                        <!--商品名字--><br>
+                        <h2 class="price">NT$<%out.println(tmp.getString("PPrice"));%></h2>
+                        <!--商品價格-->
+
+
+                        <div class="button">數量：
+                            <!--購買數量-->
                             <input type="button" class="button-num" value="-" onclick="minusNUM(0)">
-                            <input type="text" class="number" value="1" name="CartQ">
-                            <input type="button" class="button-num" value="+" onclick="addNUM(0)"> 
-                            <font class="inventory">庫存:<%out.println(tmp.getString("PQuantuty"));%></font>  <!--商品剩餘庫存-->
-                            <input type="submit" class="buttonLOOK" value="加到購物車"  onclick="">
-							<input type="hidden" name="PID" value='<%out.println(tmp.getString("PID"));%>'>
+                            <input type="text" class="number" value="1" name="CartQ" oninput = "value=value.replace(/[^\d]/g,'')">
+                            <input type="button" class="button-num" value="+" onclick="addNUM(0)">
+                            <font class="inventory">庫存:<%out.println(tmp.getString("PQuantity"));%></font>
+                            <!--商品剩餘庫存-->
+                            <input type="submit" class="buttonLOOK" value="加到購物車" onclick="">
+                            <input type="hidden" name="PID" value='<%out.println(PID);%>'>
                         </div>
-                    </p>
-                </form>
+
+                    </form>
+                </div>
             </div>
-        </div>
-</section>
-
- <!--商品介紹-->
+        </section>
 
 
+        <!--商品介紹-->
+
+    </main>
     <section class="product_intro">
         <div class="title">
             <h2>商品介紹</h2>
         </div>
         <hr width="100%">
-            
-                <div class="introduction">
-                    <ul>
-                        <li><%out.println(enter(tmp.getString("PFeature")));%></li>
-                    </ul>
-                </div>
+
+        <div class="introduction">
+            <ul>
+                <li><%out.println(enter(tmp.getString("PFeature")));%></li>
+            </ul>
+        </div>
     </section>
-<%con.close();//關閉連線 
-               
+
+
+    <!-- 留言板 -->
+    <br>
+
+    <section class="product_comment">
+        <h2 class="title">商品評論</h2>
+        <form method="post" action="commentadd.jsp">
+            <hr width="100%"><br><br><br>
+            <p>
+                <div class="comment-userphoto">
+                    <img class="userphoto" src="../assets/images/others/avatar.png" width="125px" height="125px">
+                    <!--使用者圖片-->
+                </div>
+<%
+String user = "";
+if(session.getAttribute("user_email") != null && !session.getAttribute("user_email").equals("")){
+	sql = "SELECT CName FROM `Client` WHERE `CAccount`='"+session.getAttribute("user_email")+"'";
+    tmp = con.createStatement().executeQuery(sql);
+	tmp.next();
+	user=tmp.getString("CName");
+}
+else{
+	user="訪客";
+}
+%>
+                <h3 class="username"><%=user%></h3>
+                <!--使用者姓名-->
+            </p>
+            <p>
+                <div class="star">
+                    <div class="my-rating-6"></div>
+                    <input type="hidden" id="test" name="star">
+                    <!--會傳值的星星-->
+                </div>
+            </p>
+            <p><textarea rows="5" cols="70" name="content" placeholder="留下您對於商品的評論...."></textarea></p> <!-- 輸入評論-->
+
+            <p><input type="submit" class="buttonLOOK" value="留下評論"></p>
+            <input type="hidden" name="PID" value='<%out.println(PID);%>'>
+        </form>
+        <br><br><br>
+        <!--寫死的留言板-->
+        <hr>
+
+<%
+			sql="SELECT * FROM `Comment` where `PID`="+PID; 
+			ResultSet rs=con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY).executeQuery(sql);
+			rs.last();
+			int total_content=rs.getRow();
+			sql="SELECT * FROM `Comment` where `PID`="+PID+" ORDER BY `Conum` DESC";
+			ResultSet rs1=con.createStatement().executeQuery(sql);
+			while(rs1.next())
+					{
+%>
+
+        <!-- 範例評論開頭1 -->
+        <br><br>
+        <div class="comment-userphoto">
+            <img src="../assets/images/others/avatar.png" width="75px" height="75px">
+        </div>
+        <div class="comment_name"><%out.print(rs1.getString(5));%></div>
+        <div class="star">
+<%
+        int star=Integer.valueOf(rs1.getString(3));
+        for(int i=0; i<star;i++){
+         out.print("<span class='fa fa-star checked'></span>");
+        }
+		for(int j=0; j<(5-star);j++){
+			out.print("<span class='fa fa-star'></span>");
+		}
+%>
+            <!--to後端:5個checked就是5星，4個cheched就是4星，checked代表星星數量-->
+        </div>
+        <p class="comment-timestamp"><%out.print(rs1.getString(7));%></p>
+
+        <%out.print(rs1.getString(6));%>
+        <hr>
+<%
+}
+    con.close();//關閉連線 
        }
     }
     catch (SQLException sExec) {
            out.println("SQL錯誤"+sExec.toString());
-    }%>
-
-<!-- 留言板 -->
-<br>
-
-    <section class="product_comment">
-        <h2 class="title">商品評論</h2>
-                    <form method="post" action="">
-                        <hr width="100%"><br><br><br>
-                    <p>
-                        <div class="comment-userphoto">
-                            <img class="userphoto" src="../assets/images/others/user.png" 
-                            width="125px" height="125px">  <!--使用者圖片-->
-                        </div>
-                        <h3 class="username">有廖美女</h3> <!--使用者姓名-->
-                    </p>
-                    <p> <div class="star">
-                                <div class="my-rating-6"></div>
-                                    <input type="hidden" id="test" name="star" > <!--會傳值的星星-->
-                                </div>
-                    </p> 
-                        <p><textarea rows="5" cols="70" placeholder="留下您對於商品的評論...." ></textarea></p> <!-- 輸入評論-->
-                        
-                        <p><input type="submit" class="buttonLOOK" value="留下評論" ></p>
-                    </form>
-                    <br><br><br>
-                    <!--寫死的留言板-->
-                    <hr>
-
-
-                <!-- 範例評論開頭1 -->
-                <br><br>
-                <div class="comment-userphoto">
-                    <img  src="../assets/images/others/user.png"
-                        width="75px" height="75px">
-                </div>
-                                <div>好順利</div>
-                                    <div class="star">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span> <!--to後端:5個checked就是5星，4個cheched就是4星，checked代表星星數量-->
-                                    </div>
-                                    <p class="comment-timestamp">2022-04-27 01:46:45 </p>
-                      
-                                拿到貨好快好順利!!拆封後煮來吃，確實很好吃!!
-                            
-
-                      
-                <!-- 範例評論結尾 -->
-
-
-               
+}%>
+        <!-- 範例評論結尾 -->
     </section>
 
-    <footer >
-		您是第<%@include file="count.jsp"%>個顧客<br>
-		Copyright © since 2022 有料 All Rights Reserved.
+
+
+
+
+    <footer>
+        Copyright © since 2022 有料 All Rights Reserved.
     </footer>
-<script>
+    <script>
 
 
 
-</script>
+    </script>
 
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -206,9 +270,6 @@
     <script src="../assets/js/star.js"></script>
     <script src="../assets/js/button_add_minus.js"></script>
 
-    <!-- nav -->
-      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
-         <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
 </body>
 
 </html>

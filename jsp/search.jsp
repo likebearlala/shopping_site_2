@@ -30,7 +30,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                   <li class="nav-item">
-                    <a class="nav-link" href="products_ALL.jsp">有料的麵</a>
+                    <a class="nav-link active" href="products_ALL.jsp">有料的麵</a>
                   </li> 
                   <li class="nav-item">
                     <a class="nav-link" href="user.jsp">會員中心</a>
@@ -50,8 +50,8 @@ if(session.getAttribute("user_email") != null && !session.getAttribute("user_ema
 else
 	a = "sign_in.jsp";
 %>
-                        <a href="<%=a%>">
-                            <!--前往會員登入註冊頁-->
+                <a href="<%=a%>">
+                    <!--前往會員登入註冊頁-->
                             <img src="../assets/images/icon/user.png" width="40px" alt="會員">
                         </a>
                     </div>
@@ -96,40 +96,48 @@ else
         </div>
     </aside>
     <!--商品陳列左側選單結束-->
-<main>
     <section>
         <!--總商品陳列-->
-        <div class="section_Tital">
 <%  
     try {
 		if(con.isClosed())
             out.println("連線建立失敗");
         else{	
-            sql = "SELECT count(*) FROM product WHERE `PBrand` = '老媽拌麵';" ;
-            ResultSet tmp = con.createStatement().executeQuery(sql);
-			tmp.next();
+            String search=request.getParameter("search");
+            sql = "SELECT * FROM product WHERE PName LIKE '%"+search+"%';";
+            ResultSet to=con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY).executeQuery(sql);
+			to.last();
+			int total=to.getRow();
+            
+            
 %>
-            <h2>老媽拌麵 </h2><h3>( <%out.println(tmp.getString("count(*)"));%>)</h3>
+        <div class="section_Tital">
+            <h2>查詢結果：<%out.println("和『"+search+"』相符的商品有"+total+"筆");%></h2>
         </div>
+		
+		<!--tempalte start-->
+
 <%
-			sql = "SELECT * FROM product WHERE `PBrand` = '老媽拌麵';" ;
-			tmp = con.createStatement().executeQuery(sql);
-			out.println("<div class='Row'>");
-			while(tmp.next()){
-				out.println("<div class='products'><a href='product_introduction.jsp?name="+tmp.getString("PID")+"'>");
-				out.println("<img src='"+tmp.getString("PImg")+"'>");
-				out.println("<p>"+tmp.getString("PName")+"</p>");
-				out.println("<p>NT$"+tmp.getString("PPrice")+"</p>");
-				out.println("</a></div>");
-			}
-			out.println("</a></div>");
+            sql = "SELECT * FROM product WHERE PName LIKE '%"+search+"%';";
+			ResultSet rs = con.createStatement().executeQuery(sql);
+            out.println("<div class='Row'>");
+				while(rs.next()){
+                    out.println("<div class='products'><a href='product_introduction.jsp?name="+rs.getString("PID")+"'>");
+                    out.println("<img src='"+rs.getString("PImg")+"'>");
+                    out.println("<p>"+rs.getString("PName")+"</p>");
+                    out.println("<p>NT$"+rs.getString("PPrice")+"</p>");
+                    out.println("</a></div>");                       
+                }
+            out.println("</div>");
 			con.close();//關閉連線 
-		}
-	}
+	    }
+    }
     catch (SQLException sExec) {
            out.println("SQL錯誤"+sExec.toString());
     }
 %>
+		<!--trmplate end-->
+		
     </section>
     <!--商品陳列結束-->
 </main>

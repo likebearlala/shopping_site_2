@@ -1,4 +1,4 @@
 <%
 session.removeAttribute("user_email");
-response.sendRedirect("../pages/sign_in.html");
+response.sendRedirect("sign_in.jsp");
 %>

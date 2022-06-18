@@ -13,8 +13,6 @@ if(session.getAttribute("user_email") != null ){
         user_address=rs.getString("CAddress");
         user_phone=rs.getString("CPhone");
 	}
-
-   
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,56 +29,74 @@ if(session.getAttribute("user_email") != null ){
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <link rel="stylesheet" href="../assets/css/all.css">
     <link rel="stylesheet" href="../assets/css/member_center.css">
-
+    <link rel="icon" href="../assets/images/icon/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <header>
         <!--網頁最上方固定欄-->
         <!--LOGO有料-->
-        <div class="t-logo">
-            <a href="../index.jsp">
-                <img src="../assets/images/icon/logo.png" width="100px" alt="有料">
-            </a>
-        </div>
-        <!--頁面選單-->
-        <nav>
-            <div class="t-showProducts">
-                <a href="products_ALL.jsp">有料的麵</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-amos" role="navigation">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.jsp">
+                <img src="../assets/images/icon/logo.png" width="100"  alt="有料" class="d-inline-block align-text-top" id="logo-img"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+               <!--頁面選單-->
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                  <!-- <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="products_ALL.jsp">有料的麵</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link active" href="user.jsp">會員中心</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="about_us.jsp">關於有料</a>
+                  </li> 
+                </ul>
+                <!--會員及購物車圖標-->
+                <div class="t-icon">
+                    <div class="t-i-user">
+<%
+String a = "";
+if(session.getAttribute("user_email") != null && !session.getAttribute("user_email").equals("")){
+	a = "user.jsp";
+}
+else
+	a = "sign_in.jsp";
+%>
+                        <a href="<%=a%>">
+                            <!--前往會員登入註冊頁-->
+                            <img src="../assets/images/icon/user.png" width="40px" alt="會員">
+                        </a>
+                    </div>
+                    <div class="t-i-cart">
+                        <a href="shopping_cart.jsp">
+                            <!--前往購物車頁-->
+                            <img src="../assets/images/icon/shopping-cart.png" width="40px" alt="購物車">
+                        </a>
+                    </div>
+                </div>
+                 <!--搜尋欄-->
+                <div class="t-search">
+                    <form class="searchForm" action="search.jsp">
+                        <input type="text" class="searchText" placeholder="Search..." name="search">
+                        <button type="submit" class="searchIcon">
+                            <img src="../assets/images/icon/search.png" width="20px">
+                        </button>
+                    </form>
+                </div>
+              </div>
             </div>
-            <div class="t-MemberCenter">
-                <a href="member_center.html">會員中心</a>
-            </div>
-            <div class="t-aboutUS">
-                <a href="about_us.html">關於有料</a>
-            </div>
-        </nav>
-        <!--會員及購物車圖標-->
-        <div class="t-icon">
-            <div class="t-i-user">
-                <a href="user.jsp">
-                    <!--前往會員登入註冊頁-->
-                    <img src="../assets/images/icon/user.png" width="40px" alt="會員">
-                </a>
-            </div>
-            <div class="t-i-cart">
-                <a href="shopping_cart.html">
-                    <!--前往購物車頁-->
-                    <img src="../assets/images/icon/shopping-cart.png" width="40px" alt="購物車">
-                </a>
-            </div>
-        </div>
-        <!--搜尋欄-->
-        <div class="t-search">
-            <form class="searchForm">
-                <input type="text" class="searchText" placeholder="Search...">
-                <button type="submit" class="searchIcon">
-                    <img src="../assets/images/icon/search.png" width="20px">
-                </button>
-            </form>
-        </div>
+          </nav>
+           <!--網頁最上方固定欄結束-->
     </header>
-    <!--網頁最上方固定欄結束-->
+    
     <main>
     <aside>
         <!--左側選單-->
@@ -115,27 +131,27 @@ if(session.getAttribute("user_email") != null ){
                 <div class="memberdata_content">
                     <!--FORM 會員資料顯示-->
                     <!--method="post"-->
+                    <div class="changebtn">
+                        <!-- 修改取消鈕 -->
+                        <img src="../assets/images/others/pencil.png" width="35px">
+                        <button class="activebtn" id="activebtn" onclick="lock(); changebtn();">
+                            <div id="revise" class="">修改</div>
+                            <div id="cancel">取消</div>
+                        </button>
+                    </div>
                     <form method="post" action="update.jsp">
-                        <div class="changebtn">
-                            <!-- 修改取消鈕 -->
-                            <img src="../assets/images/others/pencil.png" width="35px">
-                            <button class="activebtn" id="activebtn" onclick="lock(); changebtn();">
-                                <div id="revise" class="">修改</div>
-                                <div id="cancel">取消</div>
-                            </button>
-                        </div>
                         <div class="inputdata">
                             <div class="md-inputone">
                                 <!--左側-->
-                                <input type="email" placeholder="電子郵件" name="user_email" value="<%=user_email%>" disabled><br>
-                                <input type="text" placeholder="地址" name="user_address" value="<%=user_address%>" disabled><br>
-                                <input id="Name" type="text" placeholder="姓名" name="username" value="<%=username%>" required disabled>
+                                <input type="email" placeholder="電子郵件" value="<%=user_email%>" disabled><br>
+                                <input type="text" placeholder="地址" value="<%=user_address%>" disabled><br>
+                                <input id="Name" type="text" placeholder="姓名" value="<%=username%>" name="cname" required disabled>
                             </div>
                             <div class="md-inputtwo">
                                 <!--右側-->
-                                <input type="text" placeholder="電話" name="user_phone" value="<%=user_phone%>" disabled><br>
-                                <input id="password" type="password" name="user_password" placeholder="密碼" value="" required disabled><br>
-                                <input id="check_password" type="password" placeholder="確認密碼"  onblur="check()" required disabled>
+                                <input type="text" placeholder="電話" value="<%=user_phone%>" disabled><br>
+                                <input id="password" type="password" placeholder="密碼" value="" name="user_password" required disabled><br>
+                                <input id="check_password" type="password" placeholder="確認密碼" name="check_password" onblur="check()" required disabled>
                                 <p>* 更改密碼請再次確認 *</p>
                             </div>
                         </div>
@@ -172,20 +188,17 @@ if(session.getAttribute("user_email") != null ){
                             <th>訂單總額</th>
                             <th>配送方式</th>
                         </tr>
-                        <tr>
-                            <td>2022-01-01 20:34:58</td>
-                            <td>T000032</td>
-                            <td>千拌麵∣辣豆瓣金盞花麵 (3包/袋)</td>
-                            <td>NT$1161</td>
-                            <td>宅配到府</td>
-                        </tr>
-                        <tr>
-                            <td>2022-05-20 22:12:40</td>
-                            <td>T000058</td>
-                            <td>曾粉 海味叻沙 Seafood Laksa</td>
-                            <td>NT$1161</td>
-                            <td>全家取貨</td>
-                        </tr>
+<%
+						sql = "SELECT * FROM `Order` WHERE `CAccount`='"+session.getAttribute("user_email")+"';";
+						rs = con.createStatement().executeQuery(sql);
+						while(rs.next()){
+							out.println("<tr><td>"+rs.getString("ODate")+"</td>");
+                            out.println("<td>"+rs.getString("OrderID")+"</td>");
+                            out.println("<td>"+rs.getString("Pname")+"</td>");
+                            out.println("<td>NT$"+rs.getString("OTotal")+"</td>");
+                            out.println("<td>"+rs.getString("OSendway")+"</td></tr>");
+						}
+%>
                     </table>
                 </form>
             </div>
@@ -207,34 +220,24 @@ if(session.getAttribute("user_email") != null ){
                             <th class="th-star">星級評分</th>
                             <th>評論</th>
                         </tr>
-                        <tr>
-                            <td>2022-01-01 14:32:33</td>
-                            <td>千拌麵∣辣豆瓣金盞花麵 (3包/袋)</td>
-                            <td>
-                                <div class="star">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                </div>
-                            </td>
-                            <td>辣豆瓣很香，麵條Q彈有嚼勁，非常好吃一定會回購!</td>
-                        </tr>
-                        <tr>
-                            <td>2022-01-05 10:24:45</td>
-                            <td>千拌麵∣辣豆瓣金盞花麵 (3包/袋)</td>
-                            <td>
-                                <div class="star">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                </div>
-                            </td>
-                            <td>辣豆瓣很香，麵條Q彈有嚼勁，非常好吃一定會回購!</td>
-                        </tr>
+<%
+						sql = "SELECT * FROM `Comment` WHERE `CoAccount`='"+session.getAttribute("user_email")+"';";
+						rs = con.createStatement().executeQuery(sql);
+						while(rs.next()){
+							out.print("<tr><td>"+rs.getString("CoDate")+"</td>");
+							sql = "SELECT * FROM `Product` WHERE `PID`='"+rs.getString("PID")+"';";
+							ResultSet rs1 = con.createStatement().executeQuery(sql);
+							rs1.next();
+                            out.print("<td>"+rs1.getString("PName")+"</td>");
+                            out.print("<td><div class='star'>");
+							int star=Integer.valueOf(rs.getString("Star"));
+                            for(int i=0; i<star;i++){
+								out.print("<span class='fa fa-star checked'></span>");
+                            }
+                            out.print("</div></td>");
+                            out.print("<td>"+rs.getString("Cocontent")+"</td></tr>");
+						}
+%>
                     </table>
                 </form>
             </div>
@@ -242,7 +245,7 @@ if(session.getAttribute("user_email") != null ){
     </section>
     </main>
     <footer>
-		Copyright © since 2022 有料 All Rights Reserved.
+        Copyright © since 2022 有料 All Rights Reserved.
     </footer>
 
     <script src="../assets/js/check_password.js"></script>
@@ -253,16 +256,10 @@ if(session.getAttribute("user_email") != null ){
 </body>
 
 </html>
-                    
-                
 <%
 }
 else{
 	con.close();//結束資料庫連結
-%>
-<h1><font color="red">您尚未登入，請登入！</font></h1>
-
-<%
-response.sendRedirect("../pages/sign_in.html");
+	response.sendRedirect("sign_in.jsp");
 }
 %>
