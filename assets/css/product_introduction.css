@@ -18,13 +18,19 @@ section{
   max-width: 1200px;
   padding: 3%;
   border-radius: 20px 20px;
-  margin: 5% auto;
+  margin: 2% auto 0;
 }
 .product_intro{
-  margin: 5% auto 0;
-  line-height: 3em;
+  line-height: 2.5em;
 }
 
+.product_comment {
+  margin-bottom: 2%;
+}
+
+section hr {
+  margin: 1rem 0 2rem;
+}
 .price{ 
   color: red;
   font-weight: bold;
@@ -53,9 +59,7 @@ section{
   color:#22333B;
   letter-spacing:2%;
 }
-.title{
-  padding-bottom: 1rem;
-}
+
 .button {
   margin-top: 5%;
 }
